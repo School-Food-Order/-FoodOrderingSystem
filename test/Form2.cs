@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace test
 {
-    public partial class Form2 : Form
+    public partial class CheckoutScreen : Form
     {
         
-        public Form2()
+        public CheckoutScreen()
         {
             InitializeComponent();
 
@@ -21,11 +21,7 @@ namespace test
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
 
-            mainLabel.Text = Form1.setValueForMainLabel;
-            sideLabel.Text = Form1.setValueForSideLabel;
-            drinkLabel.Text = Form1.setValueForDrinkLabel;
         }
     }
 }

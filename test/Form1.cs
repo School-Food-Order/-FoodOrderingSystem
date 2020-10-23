@@ -10,66 +10,47 @@ using System.Windows.Forms;
 
 namespace test
 {
-    public partial class Form1 : Form
+    public partial class OrderScreen : Form
     {
 
-        public static string setValueForMainLabel = "";
-        public static string setValueForSideLabel = "";
-        public static string setValueForDrinkLabel = "";
-
-
-        public Form1()
+        public OrderScreen()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void burgerMealButton_Click(object sender, EventArgs e)
         {
-            setValueForMainLabel = "Burger";
-            setValueForSideLabel = "Chips";
-            setValueForDrinkLabel = "Coke";
-            Form2 form2 = new Form2();
-            this.Hide();
-
-            form2.ShowDialog();
+            orderListBox.Items.Add("Burger Meal Deal\t\t\t\t£6.29");
+            orderListBox.Items.Add("\tBurger");
+            orderListBox.Items.Add("\tChips");
+            orderListBox.Items.Add("\tRegular Coke");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void nuggetMealButton_Click(object sender, EventArgs e)
         {
-            setValueForMainLabel = "9 Chicken Nuggets";
-            setValueForSideLabel = "Chips";
-            setValueForDrinkLabel = "Coke";
-            Form2 form2 = new Form2();
-            this.Hide();
-
-            form2.ShowDialog();
-            
-
+            orderListBox.Items.Add("9 Chicken Nugget Meal Deal\t\t\t£6.29");
+            orderListBox.Items.Add("\tBurger");
+            orderListBox.Items.Add("\tChips");
+            orderListBox.Items.Add("\tRegular Coke");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void chickenWrapButton_Click(object sender, EventArgs e)
         {
-            setValueForMainLabel = "Chicken wrap";
-            setValueForSideLabel = "Chips";
-            setValueForDrinkLabel = "Coke";
-            Form2 form2 = new Form2();
-            this.Hide();
-            form2.ShowDialog();
-            
-
+            orderListBox.Items.Add("Chicken Wrap (Grilled) Meal Deal\t\t\t£5.50");
+            orderListBox.Items.Add("\tChicken Wrap (Grilled)");
+            orderListBox.Items.Add("\tChips");
+            orderListBox.Items.Add("\tRegular Coke");
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void largeChipsButton_Click(object sender, EventArgs e)
         {
-            setValueForMainLabel = "N/A";
-            setValueForSideLabel = "Large Chips";
-            setValueForDrinkLabel = "Coke";
-            Form2 form2 = new Form2(); 
-            this.Hide();
+            orderListBox.Items.Add("Large Chips\t\t\t\t£1.89");
+        }
 
-            form2.ShowDialog();
-           
-
+        private void checkoutLabel_Click(object sender, EventArgs e)
+        {
+            CheckoutScreen checkoutForm = new CheckoutScreen();
+            checkoutForm.Show();
         }
     }
 }
