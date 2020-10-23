@@ -12,9 +12,26 @@ namespace test
 {
     public partial class Form2 : Form
     {
+        Form1 frm1 = new Form1();
+        
         public Form2()
         {
             InitializeComponent();
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            
+
+            switch (frm1.menuSelect)
+            {
+                case 1:
+                    mainLabel.Text = "Burger";
+                    sideLabel.Text = "Chips";
+                    drinkLabel.Text = "Coke";
+                    break;
+            }
         }
     }
 }
