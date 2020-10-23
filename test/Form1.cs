@@ -29,12 +29,19 @@ namespace test
             setValueForSideLabel = "Chips";
             setValueForDrinkLabel = "Coke";
             Form2 form2 = new Form2();
+            this.Hide();
+
             form2.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            setValueForMainLabel = "9 Chicken Nuggets";
+            setValueForSideLabel = "Chips";
+            setValueForDrinkLabel = "Coke";
             Form2 form2 = new Form2();
+            this.Hide();
+
             form2.ShowDialog();
             
 
@@ -42,7 +49,11 @@ namespace test
 
         private void button3_Click(object sender, EventArgs e)
         {
+            setValueForMainLabel = "Chicken wrap";
+            setValueForSideLabel = "Chips";
+            setValueForDrinkLabel = "Coke";
             Form2 form2 = new Form2();
+            this.Hide();
             form2.ShowDialog();
             
 
@@ -50,7 +61,12 @@ namespace test
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            setValueForMainLabel = "N/A";
+            setValueForSideLabel = "Large Chips";
+            setValueForDrinkLabel = "Coke";
+            Form2 form2 = new Form2(); 
+            this.Hide();
+
             form2.ShowDialog();
            
 

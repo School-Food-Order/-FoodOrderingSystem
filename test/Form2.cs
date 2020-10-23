@@ -24,6 +24,8 @@ namespace test
             
 
             mainLabel.Text = Form1.setValueForMainLabel;
+            sideLabel.Text = Form1.setValueForSideLabel;
+            drinkLabel.Text = Form1.setValueForDrinkLabel;
         }
     }
 }
