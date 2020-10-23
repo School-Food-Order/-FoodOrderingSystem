@@ -12,12 +12,6 @@ namespace test
 {
     public partial class Form1 : Form
     {
-
-        public static string setValueForMainLabel = "";
-        public static string setValueForSideLabel = "";
-        public static string setValueForDrinkLabel = "";
-
-
         public Form1()
         {
             InitializeComponent();
