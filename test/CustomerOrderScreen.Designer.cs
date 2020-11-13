@@ -34,7 +34,7 @@
             this.largeChipsButton = new System.Windows.Forms.Button();
             this.orderListBox = new System.Windows.Forms.ListBox();
             this.totalLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.totalCostTextBox = new System.Windows.Forms.TextBox();
             this.checkoutLabel = new System.Windows.Forms.Button();
             this.yourOrderLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -45,7 +45,7 @@
             this.burgerMealButton.Name = "burgerMealButton";
             this.burgerMealButton.Size = new System.Drawing.Size(216, 120);
             this.burgerMealButton.TabIndex = 0;
-            this.burgerMealButton.Text = "Burger Meal £5";
+            this.burgerMealButton.Text = "Burger Meal £6.29";
             this.burgerMealButton.UseVisualStyleBackColor = true;
             this.burgerMealButton.Click += new System.EventHandler(this.burgerMealButton_Click);
             // 
@@ -55,7 +55,7 @@
             this.nuggetMealButton.Name = "nuggetMealButton";
             this.nuggetMealButton.Size = new System.Drawing.Size(216, 120);
             this.nuggetMealButton.TabIndex = 1;
-            this.nuggetMealButton.Text = "Nugget meal £6";
+            this.nuggetMealButton.Text = "Nugget meal £6.29";
             this.nuggetMealButton.UseVisualStyleBackColor = true;
             this.nuggetMealButton.Click += new System.EventHandler(this.nuggetMealButton_Click);
             // 
@@ -65,7 +65,7 @@
             this.chickenWrapButton.Name = "chickenWrapButton";
             this.chickenWrapButton.Size = new System.Drawing.Size(216, 120);
             this.chickenWrapButton.TabIndex = 2;
-            this.chickenWrapButton.Text = "Chicken wrap £3";
+            this.chickenWrapButton.Text = "Chicken wrap £5.50";
             this.chickenWrapButton.UseVisualStyleBackColor = true;
             this.chickenWrapButton.Click += new System.EventHandler(this.chickenWrapButton_Click);
             // 
@@ -75,7 +75,7 @@
             this.largeChipsButton.Name = "largeChipsButton";
             this.largeChipsButton.Size = new System.Drawing.Size(216, 120);
             this.largeChipsButton.TabIndex = 3;
-            this.largeChipsButton.Text = "Large Chips";
+            this.largeChipsButton.Text = "Large Chips £1.89";
             this.largeChipsButton.UseVisualStyleBackColor = true;
             this.largeChipsButton.Click += new System.EventHandler(this.largeChipsButton_Click);
             // 
@@ -91,19 +91,21 @@
             // 
             this.totalLabel.AutoSize = true;
             this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLabel.Location = new System.Drawing.Point(920, 577);
+            this.totalLabel.Location = new System.Drawing.Point(909, 579);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(95, 24);
+            this.totalLabel.Size = new System.Drawing.Size(106, 24);
             this.totalLabel.TabIndex = 5;
-            this.totalLabel.Text = "TOTAL : ";
+            this.totalLabel.Text = "TOTAL : £";
             // 
-            // textBox1
+            // totalCostTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1021, 577);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 26);
-            this.textBox1.TabIndex = 6;
+            this.totalCostTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCostTextBox.Location = new System.Drawing.Point(1021, 577);
+            this.totalCostTextBox.Name = "totalCostTextBox";
+            this.totalCostTextBox.ReadOnly = true;
+            this.totalCostTextBox.Size = new System.Drawing.Size(181, 26);
+            this.totalCostTextBox.TabIndex = 6;
+            this.totalCostTextBox.Text = "0.00";
             // 
             // checkoutLabel
             // 
@@ -138,7 +140,7 @@
             this.Controls.Add(this.chickenWrapButton);
             this.Controls.Add(this.yourOrderLabel);
             this.Controls.Add(this.checkoutLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.totalCostTextBox);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.orderListBox);
             this.Name = "OrderScreen";
@@ -157,7 +159,7 @@
         private System.Windows.Forms.Button largeChipsButton;
         private System.Windows.Forms.ListBox orderListBox;
         private System.Windows.Forms.Label totalLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox totalCostTextBox;
         private System.Windows.Forms.Button checkoutLabel;
         private System.Windows.Forms.Label yourOrderLabel;
     }

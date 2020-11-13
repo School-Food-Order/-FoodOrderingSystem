@@ -13,15 +13,17 @@ namespace test
     public partial class CheckoutScreen : Form
     {
         
-        public CheckoutScreen()
+        public CheckoutScreen(float total)
         {
             InitializeComponent();
-
+            totalTextBox.Text = total.ToString();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+
+        private void checkoutButton_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }

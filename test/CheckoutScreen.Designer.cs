@@ -33,7 +33,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.orderTotalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.checkoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // yourOrderLabel
@@ -69,23 +69,26 @@
             this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalTextBox.Location = new System.Drawing.Point(257, 442);
             this.totalTextBox.Name = "totalTextBox";
+            this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(100, 26);
             this.totalTextBox.TabIndex = 3;
             // 
-            // button1
+            // checkoutButton
             // 
-            this.button1.Location = new System.Drawing.Point(435, 442);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.checkoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutButton.Location = new System.Drawing.Point(393, 437);
+            this.checkoutButton.Name = "checkoutButton";
+            this.checkoutButton.Size = new System.Drawing.Size(104, 37);
+            this.checkoutButton.TabIndex = 4;
+            this.checkoutButton.Text = "Check-out";
+            this.checkoutButton.UseVisualStyleBackColor = true;
+            this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
             // 
             // CheckoutScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 505);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkoutButton);
             this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.orderTotalLabel);
             this.Controls.Add(this.listBox1);
@@ -93,7 +96,6 @@
             this.Name = "CheckoutScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checkout";
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,6 +107,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label orderTotalLabel;
         private System.Windows.Forms.TextBox totalTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button checkoutButton;
     }
 }
