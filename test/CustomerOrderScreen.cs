@@ -108,7 +108,7 @@ namespace test
                 return;
             }
 
-            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost);
+            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox);
             checkoutForm.Show();
         }
     }

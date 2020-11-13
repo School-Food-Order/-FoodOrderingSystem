@@ -30,7 +30,7 @@
         private void InitializeComponent()
         {
             this.yourOrderLabel = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.checkoutListBox = new System.Windows.Forms.ListBox();
             this.orderTotalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.checkoutButton = new System.Windows.Forms.Button();
@@ -46,13 +46,13 @@
             this.yourOrderLabel.TabIndex = 0;
             this.yourOrderLabel.Text = "YOUR ORDER : ";
             // 
-            // listBox1
+            // checkoutListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(40, 47);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(317, 381);
-            this.listBox1.TabIndex = 1;
+            this.checkoutListBox.FormattingEnabled = true;
+            this.checkoutListBox.Location = new System.Drawing.Point(40, 47);
+            this.checkoutListBox.Name = "checkoutListBox";
+            this.checkoutListBox.Size = new System.Drawing.Size(317, 381);
+            this.checkoutListBox.TabIndex = 1;
             // 
             // orderTotalLabel
             // 
@@ -91,7 +91,7 @@
             this.Controls.Add(this.checkoutButton);
             this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.orderTotalLabel);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.checkoutListBox);
             this.Controls.Add(this.yourOrderLabel);
             this.Name = "CheckoutScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -104,7 +104,7 @@
         #endregion
 
         private System.Windows.Forms.Label yourOrderLabel;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox checkoutListBox;
         private System.Windows.Forms.Label orderTotalLabel;
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.Button checkoutButton;
