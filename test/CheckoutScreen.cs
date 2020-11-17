@@ -31,7 +31,15 @@ namespace test
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thank-you for placing your order, it has been sent to the kitchen to be prepared!", "Order Confirmation", MessageBoxButtons.OK);
+            DialogResult result = MessageBox.Show("Are you sure you want to place this order?", "Order Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show("Thank-you for placing your order, it has been sent to the kitchen to be prepared!", "Order Confirmation", MessageBoxButtons.OK);
+            }
+            else
+            {
+                return;
+            }
             oS.clearList();
             oS.Show();
             this.Dispose();

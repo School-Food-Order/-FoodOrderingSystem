@@ -118,5 +118,6 @@ namespace test
             orderListBox.Items.Clear();
             totalCostTextBox.Text = "0.00";
         }
+
     }
 }
