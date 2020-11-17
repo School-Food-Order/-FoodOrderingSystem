@@ -108,8 +108,15 @@ namespace test
                 return;
             }
 
-            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox);
+            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox, this);
+            this.Hide();
             checkoutForm.Show();
+        }
+
+        public void clearList()
+        {
+            orderListBox.Items.Clear();
+            totalCostTextBox.Text = "0.00";
         }
     }
 }
