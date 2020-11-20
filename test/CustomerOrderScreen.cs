@@ -119,5 +119,9 @@ namespace test
             totalCostTextBox.Text = "0.00";
         }
 
+        private void OrderScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,5 +45,9 @@ namespace test
             this.Dispose();
         }
 
+        private void CheckoutScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Burger.cs" />
+    <Compile Include="Chips.cs" />
+    <Compile Include="Coke.cs" />
     <Compile Include="CustomerOrderScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,7 +61,7 @@
     <Compile Include="CheckoutScreen.Designer.cs">
       <DependentUpon>CheckoutScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Food.cs" />
+    <Compile Include="FoodMeal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CustomerOrderScreen.resx">
