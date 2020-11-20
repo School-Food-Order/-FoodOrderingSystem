@@ -36,6 +36,8 @@
             this.outDeliveryListBox = new System.Windows.Forms.Label();
             this.rdyCollectionButton = new System.Windows.Forms.Button();
             this.outDeliveryButton = new System.Windows.Forms.Button();
+            this.returnPrepFromColButton = new System.Windows.Forms.Button();
+            this.returnPrepFromDelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // preparingListBox
@@ -113,12 +115,32 @@
             this.outDeliveryButton.Text = ">";
             this.outDeliveryButton.UseVisualStyleBackColor = true;
             // 
+            // returnPrepFromColButton
+            // 
+            this.returnPrepFromColButton.Location = new System.Drawing.Point(428, 263);
+            this.returnPrepFromColButton.Name = "returnPrepFromColButton";
+            this.returnPrepFromColButton.Size = new System.Drawing.Size(75, 56);
+            this.returnPrepFromColButton.TabIndex = 8;
+            this.returnPrepFromColButton.Text = "<";
+            this.returnPrepFromColButton.UseVisualStyleBackColor = true;
+            // 
+            // returnPrepFromDelButton
+            // 
+            this.returnPrepFromDelButton.Location = new System.Drawing.Point(428, 595);
+            this.returnPrepFromDelButton.Name = "returnPrepFromDelButton";
+            this.returnPrepFromDelButton.Size = new System.Drawing.Size(75, 57);
+            this.returnPrepFromDelButton.TabIndex = 9;
+            this.returnPrepFromDelButton.Text = "<";
+            this.returnPrepFromDelButton.UseVisualStyleBackColor = true;
+            // 
             // KitchenLiveOrderScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.Controls.Add(this.returnPrepFromDelButton);
+            this.Controls.Add(this.returnPrepFromColButton);
             this.Controls.Add(this.outDeliveryButton);
             this.Controls.Add(this.rdyCollectionButton);
             this.Controls.Add(this.outDeliveryListBox);
@@ -144,5 +166,7 @@
         private System.Windows.Forms.Label outDeliveryListBox;
         private System.Windows.Forms.Button rdyCollectionButton;
         private System.Windows.Forms.Button outDeliveryButton;
+        private System.Windows.Forms.Button returnPrepFromColButton;
+        private System.Windows.Forms.Button returnPrepFromDelButton;
     }
 }
