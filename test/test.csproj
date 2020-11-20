@@ -59,6 +59,12 @@
       <DependentUpon>CheckoutScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Food.cs" />
+    <Compile Include="KitchenLiveOrderScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitchenLiveOrderScreen.Designer.cs">
+      <DependentUpon>KitchenLiveOrderScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CustomerOrderScreen.resx">
@@ -66,6 +72,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CheckoutScreen.resx">
       <DependentUpon>CheckoutScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitchenLiveOrderScreen.resx">
+      <DependentUpon>KitchenLiveOrderScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
