@@ -16,6 +16,7 @@ namespace test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            KitchenLiveOrderScreen kOrderScreen = new KitchenLiveOrderScreen();
             Application.Run(new OrderScreen());
         }
     }

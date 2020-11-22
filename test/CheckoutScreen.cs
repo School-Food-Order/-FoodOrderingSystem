@@ -14,8 +14,9 @@ namespace test
     {
 
         OrderScreen oS;
+        KitchenLiveOrderScreen kos;
         
-        public CheckoutScreen(float total, ListBox list, OrderScreen oScreen)
+        public CheckoutScreen(float total, ListBox list, OrderScreen oScreen, KitchenLiveOrderScreen kOScreen)
         {
             InitializeComponent();
             totalTextBox.Text = total.ToString();
@@ -26,6 +27,7 @@ namespace test
                 checkoutListBox.Items.Add(text);
             }
             oS = oScreen;
+            kos = kOScreen;
         }
 
 
@@ -34,7 +36,9 @@ namespace test
             DialogResult result = MessageBox.Show("Are you sure you want to place this order?", "Order Confirmation", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+
                 MessageBox.Show("Thank-you for placing your order, it has been sent to the kitchen to be prepared!", "Order Confirmation", MessageBoxButtons.OK);
+                this.Dispose();
             }
             else
             {
@@ -45,5 +49,10 @@ namespace test
             this.Dispose();
         }
 
+        private void checkoutBackButton_Click(object sender, EventArgs e)
+        {
+            oS.Show();
+            this.Dispose();
+        }
     }
 }

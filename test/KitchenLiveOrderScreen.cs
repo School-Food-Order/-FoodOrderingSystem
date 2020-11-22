@@ -12,9 +12,23 @@ namespace test
 {
     public partial class KitchenLiveOrderScreen : Form
     {
+
+        CheckoutScreen cos;
+        OrderScreen oScreen;
+
         public KitchenLiveOrderScreen()
         {
             InitializeComponent();
+        }
+
+        private void rdyCollectionButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void orderToKitchen(ListBox list) 
+        {
+
         }
 
     }

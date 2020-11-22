@@ -13,6 +13,9 @@ namespace test
     public partial class OrderScreen : Form
     {
 
+        KitchenLiveOrderScreen kOrderScreen = new KitchenLiveOrderScreen();
+
+
         public OrderScreen()
         {
             InitializeComponent();
@@ -108,7 +111,7 @@ namespace test
                 return;
             }
 
-            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox, this);
+            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox, this, kOrderScreen);
             this.Hide();
             checkoutForm.Show();
         }
@@ -119,5 +122,9 @@ namespace test
             totalCostTextBox.Text = "0.00";
         }
 
+        private void OrderScreen_Load(object sender, EventArgs e)
+        {
+            kOrderScreen.Show();
+        }
     }
 }

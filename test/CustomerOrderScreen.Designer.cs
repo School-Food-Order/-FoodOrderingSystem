@@ -146,6 +146,7 @@
             this.Name = "OrderScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Food Order";
+            this.Load += new System.EventHandler(this.OrderScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
