@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace test
 {
-    class Food
+    class FoodMeal
     {
         private string nameOfItem;
         private double priceOfItem;
         private int numberOfItemCount;
+        private List<string> OrderList = new List<string>();
 
         //this part is for later addition for discount options
         private bool discountAvailable;

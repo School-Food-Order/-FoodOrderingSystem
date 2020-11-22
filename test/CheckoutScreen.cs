@@ -15,7 +15,7 @@ namespace test
 
         OrderScreen oS;
         KitchenLiveOrderScreen kos;
-        
+
         public CheckoutScreen(float total, ListBox list, OrderScreen oScreen, KitchenLiveOrderScreen kOScreen)
         {
             InitializeComponent();
