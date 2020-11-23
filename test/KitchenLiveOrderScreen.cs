@@ -13,8 +13,7 @@ namespace test
     public partial class KitchenLiveOrderScreen : Form
     {
 
-        CheckoutScreen cos;
-        OrderScreen oScreen;
+        Food[] foods;
 
         public KitchenLiveOrderScreen()
         {
@@ -26,10 +25,27 @@ namespace test
 
         }
 
-        private void orderToKitchen(ListBox list) 
+        private void orderToKitchen(Food[] f) 
         {
-
+            int i=0;
+            foreach (var item in f) 
+            {
+                foods[i] = item;
+                i++;
+            }
+            addToList();
         }
 
+        private void addToList() 
+        {
+            foreach (var item in foods) 
+            {
+                
+            }
+        }
+
+        private void preparingListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

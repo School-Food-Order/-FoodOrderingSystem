@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace test
 {
-    class Burger:FoodMeal
+    class Burger:Food
     {
         //Has access 4 items of FoodMeal:
         //OrderNumbber
@@ -38,8 +38,8 @@ namespace test
         }
         public bool BurgerHasPickles
         {
-            get { return burgerExtraPatty; }
-            set { burgerExtraPatty = value; }
+            get { return burgerHasPickles; }
+            set { burgerHasPickles = value; }
         }
         public bool BurgerHasOnions
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace test
 {
-    class Drink:FoodMeal
+    class Drink:Food
     {
         //Has access 4 items of FoodMeal:
         //OrderNumbber

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace test
 {
-    class FoodMeal
+    class Food
     {
         private int orderNumber;//Link the orders together with items on the menu
         private string nameOfItem;
@@ -47,8 +47,8 @@ namespace test
                 NumberOfItemCount--;
             }
             else
-            {
-                //Make a form that notifies the user that it's not able to remove item. 
+            { 
+                //Make a form that notifies the user that it's not able to remove item.
             }
         }
         public void AddItem()//Increments the item count by 1

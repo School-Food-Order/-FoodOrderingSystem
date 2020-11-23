@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".Designer.cs" />
     <Compile Include="Burger.cs" />
     <Compile Include="Chips.cs" />
     <Compile Include="Drink.cs" />
@@ -61,7 +62,7 @@
     <Compile Include="CheckoutScreen.Designer.cs">
       <DependentUpon>CheckoutScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="FoodMeal.cs" />
+    <Compile Include="Food.cs" />
     <Compile Include="KitchenLiveOrderScreen.cs">
       <SubType>Form</SubType>
     </Compile>

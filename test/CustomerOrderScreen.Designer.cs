@@ -37,6 +37,7 @@
             this.totalCostTextBox = new System.Windows.Forms.TextBox();
             this.checkoutLabel = new System.Windows.Forms.Button();
             this.yourOrderLabel = new System.Windows.Forms.Label();
+            this.orderScreenRemoveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // burgerMealButton
@@ -110,9 +111,9 @@
             // checkoutLabel
             // 
             this.checkoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkoutLabel.Location = new System.Drawing.Point(1061, 626);
+            this.checkoutLabel.Location = new System.Drawing.Point(942, 626);
             this.checkoutLabel.Name = "checkoutLabel";
-            this.checkoutLabel.Size = new System.Drawing.Size(142, 31);
+            this.checkoutLabel.Size = new System.Drawing.Size(247, 38);
             this.checkoutLabel.TabIndex = 7;
             this.checkoutLabel.Text = "CHECKOUT";
             this.checkoutLabel.UseVisualStyleBackColor = true;
@@ -128,12 +129,24 @@
             this.yourOrderLabel.TabIndex = 8;
             this.yourOrderLabel.Text = "YOUR ORDER : ";
             // 
+            // orderScreenRemoveButton
+            // 
+            this.orderScreenRemoveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderScreenRemoveButton.Location = new System.Drawing.Point(942, 689);
+            this.orderScreenRemoveButton.Name = "orderScreenRemoveButton";
+            this.orderScreenRemoveButton.Size = new System.Drawing.Size(247, 49);
+            this.orderScreenRemoveButton.TabIndex = 9;
+            this.orderScreenRemoveButton.Text = "REMOVE ITEM";
+            this.orderScreenRemoveButton.UseVisualStyleBackColor = true;
+            this.orderScreenRemoveButton.Click += new System.EventHandler(this.orderScreenRemoveButton_Click_1);
+            // 
             // OrderScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1264, 985);
+            this.Controls.Add(this.orderScreenRemoveButton);
             this.Controls.Add(this.largeChipsButton);
             this.Controls.Add(this.burgerMealButton);
             this.Controls.Add(this.nuggetMealButton);
@@ -163,6 +176,7 @@
         private System.Windows.Forms.TextBox totalCostTextBox;
         private System.Windows.Forms.Button checkoutLabel;
         private System.Windows.Forms.Label yourOrderLabel;
+        private System.Windows.Forms.Button orderScreenRemoveButton;
     }
 }
 

@@ -14,6 +14,9 @@ namespace test
     {
 
         KitchenLiveOrderScreen kOrderScreen = new KitchenLiveOrderScreen();
+        Burger burger = new Burger();
+        Chips chips = new Chips();
+        Drink drink = new Drink();
 
 
         public OrderScreen()
@@ -26,12 +29,10 @@ namespace test
             //Maybe have public interger to increment orderNumber?
             float totalCost;
 
-            FoodMeal mealObj = new FoodMeal();
+            burger.NameOfItem = "Burger";
+            burger.PriceOfItem = 2.49;
 
-            mealObj.NameOfItem = "Burger Meal Deal";
-            mealObj.PriceOfItem = 6.29;
-
-            orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
+            orderListBox.Items.Add(burger.NameOfItem + " \t\t\t\t £" + burger.PriceOfItem);
             orderListBox.Items.Add("\tBurger");//Add obj of burger (for customisation)
             orderListBox.Items.Add("\tChips");//Add obj of chips
             orderListBox.Items.Add("\tRegular Coke");//Add obj of drink
@@ -42,7 +43,7 @@ namespace test
                 return;
             }else
             {
-                totalCost += (float)(mealObj.PriceOfItem);
+                totalCost += (float)(burger.PriceOfItem);
                 totalCostTextBox.Text = totalCost.ToString();
             }
 
@@ -52,7 +53,7 @@ namespace test
         {
             float totalCost;
 
-            FoodMeal mealObj = new FoodMeal();
+            Food mealObj = new Food();
             mealObj.NameOfItem = "Nugget Meal";
             mealObj.PriceOfItem = 6.29;
 
@@ -77,7 +78,7 @@ namespace test
         {
             float totalCost;
 
-            FoodMeal mealObj = new FoodMeal();
+            Food mealObj = new Food();
             mealObj.NameOfItem = "Chicken wrap";
             mealObj.PriceOfItem = 5.50;
 
@@ -101,7 +102,7 @@ namespace test
         {
             float totalCost;
 
-            FoodMeal mealObj = new FoodMeal();
+            Food mealObj = new Food();
             mealObj.NameOfItem = "Large Chips";
             mealObj.PriceOfItem = 1.89;
 
@@ -143,6 +144,11 @@ namespace test
         private void OrderScreen_Load(object sender, EventArgs e)
         {
             kOrderScreen.Show();
+        }
+
+        private void orderScreenRemoveButton_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

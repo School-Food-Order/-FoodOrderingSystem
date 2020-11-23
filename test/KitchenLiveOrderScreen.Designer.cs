@@ -51,6 +51,7 @@
             this.preparingListBox.Name = "preparingListBox";
             this.preparingListBox.Size = new System.Drawing.Size(346, 550);
             this.preparingListBox.TabIndex = 0;
+            this.preparingListBox.SelectedIndexChanged += new System.EventHandler(this.preparingListBox_SelectedIndexChanged);
             // 
             // preparingLabel
             // 
