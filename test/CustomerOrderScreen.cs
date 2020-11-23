@@ -23,12 +23,18 @@ namespace test
 
         private void burgerMealButton_Click(object sender, EventArgs e)
         {
+            //Maybe have public interger to increment orderNumber?
             float totalCost;
 
-            orderListBox.Items.Add("Burger Meal Deal\t\t\t\t£6.29");
-            orderListBox.Items.Add("\tBurger");
-            orderListBox.Items.Add("\tChips");
-            orderListBox.Items.Add("\tRegular Coke");
+            FoodMeal mealObj = new FoodMeal();
+
+            mealObj.NameOfItem = "Burger Meal Deal";
+            mealObj.PriceOfItem = 6.29;
+
+            orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
+            orderListBox.Items.Add("\tBurger");//Add obj of burger (for customisation)
+            orderListBox.Items.Add("\tChips");//Add obj of chips
+            orderListBox.Items.Add("\tRegular Coke");//Add obj of drink
            
             if (!float.TryParse(totalCostTextBox.Text, out totalCost))
             {
@@ -36,7 +42,7 @@ namespace test
                 return;
             }else
             {
-                totalCost += 6.29f;
+                totalCost += (float)(mealObj.PriceOfItem);
                 totalCostTextBox.Text = totalCost.ToString();
             }
 
@@ -46,7 +52,11 @@ namespace test
         {
             float totalCost;
 
-            orderListBox.Items.Add("9 Chicken Nugget Meal Deal\t\t\t£6.29");
+            FoodMeal mealObj = new FoodMeal();
+            mealObj.NameOfItem = "Nugget Meal";
+            mealObj.PriceOfItem = 6.29;
+
+            orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
             orderListBox.Items.Add("\tBurger");
             orderListBox.Items.Add("\tChips");
             orderListBox.Items.Add("\tRegular Coke");
@@ -58,7 +68,7 @@ namespace test
             }
             else
             {
-                totalCost += 6.29f;
+                totalCost += (float)(mealObj.PriceOfItem);
                 totalCostTextBox.Text = totalCost.ToString();
             }
         }
@@ -67,7 +77,11 @@ namespace test
         {
             float totalCost;
 
-            orderListBox.Items.Add("Chicken Wrap (Grilled) Meal Deal\t\t£5.50");
+            FoodMeal mealObj = new FoodMeal();
+            mealObj.NameOfItem = "Chicken wrap";
+            mealObj.PriceOfItem = 5.50;
+
+            orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
             orderListBox.Items.Add("\tChips");
             orderListBox.Items.Add("\tRegular Coke");
 
@@ -78,7 +92,7 @@ namespace test
             }
             else
             {
-                totalCost += 5.50f;
+                totalCost += (float)(mealObj.PriceOfItem);
                 totalCostTextBox.Text = totalCost.ToString();
             }
         }
@@ -87,7 +101,11 @@ namespace test
         {
             float totalCost;
 
-            orderListBox.Items.Add("Large Chips\t\t\t\t£1.89");
+            FoodMeal mealObj = new FoodMeal();
+            mealObj.NameOfItem = "Large Chips";
+            mealObj.PriceOfItem = 1.89;
+
+            orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
 
             if (!float.TryParse(totalCostTextBox.Text, out totalCost))
             {
@@ -96,7 +114,7 @@ namespace test
             }
             else
             {
-                totalCost += 1.89f;
+                totalCost += (float)(mealObj.PriceOfItem);
                 totalCostTextBox.Text = totalCost.ToString();
             }
         }

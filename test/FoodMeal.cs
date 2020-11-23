@@ -8,14 +8,15 @@ namespace test
 {
     class FoodMeal
     {
+        private int orderNumber;//Link the orders together with items on the menu
         private string nameOfItem;
         private double priceOfItem;
         private int numberOfItemCount;
-        private List<string> OrderList = new List<string>();
 
         //this part is for later addition for discount options
-        private bool discountAvailable;
-        private double percentOfDiscount;
+
+        //private bool discountAvailable;
+        //private double percentOfDiscount;
 
         public string NameOfItem
         {
@@ -31,6 +32,11 @@ namespace test
         {
             get { return numberOfItemCount; }
             set { numberOfItemCount = value; }
+        }
+        public int OrderNumber
+        {
+            get{ return orderNumber; }
+            set{ orderNumber = value; }
         }
 
 

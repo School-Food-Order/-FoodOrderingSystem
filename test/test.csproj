@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Burger.cs" />
     <Compile Include="Chips.cs" />
-    <Compile Include="Coke.cs" />
+    <Compile Include="Drink.cs" />
     <Compile Include="CustomerOrderScreen.cs">
       <SubType>Form</SubType>
     </Compile>
