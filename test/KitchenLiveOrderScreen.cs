@@ -44,8 +44,6 @@ namespace test
             }
         }
 
-        private void preparingListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
+        
     }
 }
