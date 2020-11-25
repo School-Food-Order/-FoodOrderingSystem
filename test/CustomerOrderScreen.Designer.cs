@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderScreen));
             this.burgerMealButton = new System.Windows.Forms.Button();
             this.nuggetMealButton = new System.Windows.Forms.Button();
             this.chickenWrapButton = new System.Windows.Forms.Button();
@@ -38,45 +39,49 @@
             this.checkoutLabel = new System.Windows.Forms.Button();
             this.yourOrderLabel = new System.Windows.Forms.Label();
             this.orderScreenRemoveButton = new System.Windows.Forms.Button();
+            this.burgerCustomize = new System.Windows.Forms.Button();
+            this.chickenSubCustomise = new System.Windows.Forms.Button();
+            this.chickenBoxCustomise = new System.Windows.Forms.Button();
+            this.friesCustomise = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // burgerMealButton
             // 
-            this.burgerMealButton.Location = new System.Drawing.Point(229, 203);
+            this.burgerMealButton.Image = ((System.Drawing.Image)(resources.GetObject("burgerMealButton.Image")));
+            this.burgerMealButton.Location = new System.Drawing.Point(229, 101);
             this.burgerMealButton.Name = "burgerMealButton";
-            this.burgerMealButton.Size = new System.Drawing.Size(216, 120);
+            this.burgerMealButton.Size = new System.Drawing.Size(150, 150);
             this.burgerMealButton.TabIndex = 0;
-            this.burgerMealButton.Text = "Burger Meal £6.29";
             this.burgerMealButton.UseVisualStyleBackColor = true;
             this.burgerMealButton.Click += new System.EventHandler(this.burgerMealButton_Click);
             // 
             // nuggetMealButton
             // 
-            this.nuggetMealButton.Location = new System.Drawing.Point(531, 203);
+            this.nuggetMealButton.Image = ((System.Drawing.Image)(resources.GetObject("nuggetMealButton.Image")));
+            this.nuggetMealButton.Location = new System.Drawing.Point(531, 101);
             this.nuggetMealButton.Name = "nuggetMealButton";
-            this.nuggetMealButton.Size = new System.Drawing.Size(216, 120);
+            this.nuggetMealButton.Size = new System.Drawing.Size(150, 150);
             this.nuggetMealButton.TabIndex = 1;
-            this.nuggetMealButton.Text = "Nugget meal £6.29";
             this.nuggetMealButton.UseVisualStyleBackColor = true;
             this.nuggetMealButton.Click += new System.EventHandler(this.nuggetMealButton_Click);
             // 
             // chickenWrapButton
             // 
-            this.chickenWrapButton.Location = new System.Drawing.Point(229, 358);
+            this.chickenWrapButton.Image = ((System.Drawing.Image)(resources.GetObject("chickenWrapButton.Image")));
+            this.chickenWrapButton.Location = new System.Drawing.Point(229, 328);
             this.chickenWrapButton.Name = "chickenWrapButton";
-            this.chickenWrapButton.Size = new System.Drawing.Size(216, 120);
+            this.chickenWrapButton.Size = new System.Drawing.Size(150, 150);
             this.chickenWrapButton.TabIndex = 2;
-            this.chickenWrapButton.Text = "Chicken wrap £5.50";
             this.chickenWrapButton.UseVisualStyleBackColor = true;
             this.chickenWrapButton.Click += new System.EventHandler(this.chickenWrapButton_Click);
             // 
             // largeChipsButton
             // 
-            this.largeChipsButton.Location = new System.Drawing.Point(531, 358);
+            this.largeChipsButton.Image = ((System.Drawing.Image)(resources.GetObject("largeChipsButton.Image")));
+            this.largeChipsButton.Location = new System.Drawing.Point(531, 328);
             this.largeChipsButton.Name = "largeChipsButton";
-            this.largeChipsButton.Size = new System.Drawing.Size(216, 120);
+            this.largeChipsButton.Size = new System.Drawing.Size(150, 150);
             this.largeChipsButton.TabIndex = 3;
-            this.largeChipsButton.Text = "Large Chips £1.89";
             this.largeChipsButton.UseVisualStyleBackColor = true;
             this.largeChipsButton.Click += new System.EventHandler(this.largeChipsButton_Click);
             // 
@@ -110,13 +115,15 @@
             // 
             // checkoutLabel
             // 
+            this.checkoutLabel.BackColor = System.Drawing.Color.LightGreen;
             this.checkoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkoutLabel.Location = new System.Drawing.Point(942, 626);
             this.checkoutLabel.Name = "checkoutLabel";
-            this.checkoutLabel.Size = new System.Drawing.Size(247, 38);
+            this.checkoutLabel.Size = new System.Drawing.Size(247, 45);
             this.checkoutLabel.TabIndex = 7;
             this.checkoutLabel.Text = "CHECKOUT";
-            this.checkoutLabel.UseVisualStyleBackColor = true;
+            this.checkoutLabel.UseVisualStyleBackColor = false;
             this.checkoutLabel.Click += new System.EventHandler(this.checkoutLabel_Click);
             // 
             // yourOrderLabel
@@ -131,14 +138,56 @@
             // 
             // orderScreenRemoveButton
             // 
+            this.orderScreenRemoveButton.BackColor = System.Drawing.Color.IndianRed;
             this.orderScreenRemoveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderScreenRemoveButton.Location = new System.Drawing.Point(942, 689);
             this.orderScreenRemoveButton.Name = "orderScreenRemoveButton";
             this.orderScreenRemoveButton.Size = new System.Drawing.Size(247, 49);
             this.orderScreenRemoveButton.TabIndex = 9;
             this.orderScreenRemoveButton.Text = "REMOVE ITEM";
-            this.orderScreenRemoveButton.UseVisualStyleBackColor = true;
+            this.orderScreenRemoveButton.UseVisualStyleBackColor = false;
             this.orderScreenRemoveButton.Click += new System.EventHandler(this.orderScreenRemoveButton_Click_1);
+            // 
+            // burgerCustomize
+            // 
+            this.burgerCustomize.BackColor = System.Drawing.Color.Pink;
+            this.burgerCustomize.Location = new System.Drawing.Point(229, 246);
+            this.burgerCustomize.Name = "burgerCustomize";
+            this.burgerCustomize.Size = new System.Drawing.Size(150, 45);
+            this.burgerCustomize.TabIndex = 10;
+            this.burgerCustomize.Text = "Customize";
+            this.burgerCustomize.UseVisualStyleBackColor = false;
+            this.burgerCustomize.Click += new System.EventHandler(this.burgerCustomize_Click);
+            // 
+            // chickenSubCustomise
+            // 
+            this.chickenSubCustomise.BackColor = System.Drawing.Color.Pink;
+            this.chickenSubCustomise.Location = new System.Drawing.Point(229, 473);
+            this.chickenSubCustomise.Name = "chickenSubCustomise";
+            this.chickenSubCustomise.Size = new System.Drawing.Size(150, 45);
+            this.chickenSubCustomise.TabIndex = 11;
+            this.chickenSubCustomise.Text = "Customize";
+            this.chickenSubCustomise.UseVisualStyleBackColor = false;
+            // 
+            // chickenBoxCustomise
+            // 
+            this.chickenBoxCustomise.BackColor = System.Drawing.Color.Pink;
+            this.chickenBoxCustomise.Location = new System.Drawing.Point(531, 246);
+            this.chickenBoxCustomise.Name = "chickenBoxCustomise";
+            this.chickenBoxCustomise.Size = new System.Drawing.Size(150, 45);
+            this.chickenBoxCustomise.TabIndex = 12;
+            this.chickenBoxCustomise.Text = "Customize";
+            this.chickenBoxCustomise.UseVisualStyleBackColor = false;
+            // 
+            // friesCustomise
+            // 
+            this.friesCustomise.BackColor = System.Drawing.Color.Pink;
+            this.friesCustomise.Location = new System.Drawing.Point(531, 473);
+            this.friesCustomise.Name = "friesCustomise";
+            this.friesCustomise.Size = new System.Drawing.Size(150, 45);
+            this.friesCustomise.TabIndex = 13;
+            this.friesCustomise.Text = "Customize";
+            this.friesCustomise.UseVisualStyleBackColor = false;
             // 
             // OrderScreen
             // 
@@ -146,6 +195,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1264, 985);
+            this.Controls.Add(this.friesCustomise);
+            this.Controls.Add(this.chickenBoxCustomise);
+            this.Controls.Add(this.chickenSubCustomise);
+            this.Controls.Add(this.burgerCustomize);
             this.Controls.Add(this.orderScreenRemoveButton);
             this.Controls.Add(this.largeChipsButton);
             this.Controls.Add(this.burgerMealButton);
@@ -177,6 +230,10 @@
         private System.Windows.Forms.Button checkoutLabel;
         private System.Windows.Forms.Label yourOrderLabel;
         private System.Windows.Forms.Button orderScreenRemoveButton;
+        private System.Windows.Forms.Button burgerCustomize;
+        private System.Windows.Forms.Button chickenSubCustomise;
+        private System.Windows.Forms.Button chickenBoxCustomise;
+        private System.Windows.Forms.Button friesCustomise;
     }
 }
 

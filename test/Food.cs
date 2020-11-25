@@ -11,7 +11,6 @@ namespace test
         private int orderNumber;//Link the orders together with items on the menu
         private string nameOfItem;
         private double priceOfItem;
-        private int numberOfItemCount;
 
         //this part is for later addition for discount options
 
@@ -28,34 +27,11 @@ namespace test
             get { return priceOfItem; }
             set { priceOfItem = value; }
         }
-        public int NumberOfItemCount
-        {
-            get { return numberOfItemCount; }
-            set { numberOfItemCount = value; }
-        }
         public int OrderNumber
         {
             get{ return orderNumber; }
             set{ orderNumber = value; }
         }
-
-
-       public void RemoveItem()//Removes a item from 
-        {
-            if (NumberOfItemCount>=1)
-            {
-                NumberOfItemCount--;
-            }
-            else
-            { 
-                //Make a form that notifies the user that it's not able to remove item.
-            }
-        }
-        public void AddItem()//Increments the item count by 1
-        {
-            NumberOfItemCount++;
-        }
         
-
     }
 }

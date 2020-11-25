@@ -14,10 +14,6 @@ namespace test
     {
 
         KitchenLiveOrderScreen kOrderScreen = new KitchenLiveOrderScreen();
-        Burger burger = new Burger();
-        Chips chips = new Chips();
-        Drink drink = new Drink();
-
 
         public OrderScreen()
         {
@@ -28,6 +24,8 @@ namespace test
         {
             //Maybe have public interger to increment orderNumber?
             float totalCost;
+            //create object to pass to kitchen screen
+            Burger burger = new Burger();
 
             burger.NameOfItem = "Burger";
             burger.PriceOfItem = 2.49;
@@ -149,6 +147,14 @@ namespace test
         private void orderScreenRemoveButton_Click_1(object sender, EventArgs e)
         {
             
+        }
+
+        private void burgerCustomize_Click(object sender, EventArgs e)
+        {
+            Burger burger = new Burger();
+            BurgerCustomiseScreen bCustScreen = new BurgerCustomiseScreen(this);
+            this.Hide();
+            bCustScreen.Show();
         }
     }
 }
