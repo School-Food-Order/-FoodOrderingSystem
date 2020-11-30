@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace test
 {
-    class Food
+    public class Food
     {
         private int orderNumber;//Link the orders together with items on the menu
         private string nameOfItem;

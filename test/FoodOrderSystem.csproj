@@ -60,6 +60,12 @@
       <DependentUpon>ChickenCustomiseScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Chips.cs" />
+    <Compile Include="ChipsCustomiseScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChipsCustomiseScreen.Designer.cs">
+      <DependentUpon>ChipsCustomiseScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Drink.cs" />
     <Compile Include="CustomerOrderScreen.cs">
       <SubType>Form</SubType>
@@ -72,6 +78,12 @@
     </Compile>
     <Compile Include="CheckoutScreen.Designer.cs">
       <DependentUpon>CheckoutScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrinkCustomiseScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrinkCustomiseScreen.Designer.cs">
+      <DependentUpon>DrinkCustomiseScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Food.cs" />
     <Compile Include="TakeoutSelectionScreen.cs">
@@ -91,11 +103,20 @@
     <EmbeddedResource Include="BurgerCustomiseScreen.resx">
       <DependentUpon>BurgerCustomiseScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChickenCustomiseScreen.resx">
+      <DependentUpon>ChickenCustomiseScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChipsCustomiseScreen.resx">
+      <DependentUpon>ChipsCustomiseScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerOrderScreen.resx">
       <DependentUpon>CustomerOrderScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckoutScreen.resx">
       <DependentUpon>CheckoutScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrinkCustomiseScreen.resx">
+      <DependentUpon>DrinkCustomiseScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KitchenLiveOrderScreen.resx">
       <DependentUpon>KitchenLiveOrderScreen.cs</DependentUpon>

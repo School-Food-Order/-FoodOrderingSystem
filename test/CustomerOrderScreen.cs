@@ -153,9 +153,25 @@ namespace test
         private void burgerCustomize_Click(object sender, EventArgs e)
         {
             Burger burger = new Burger();
-            BurgerCustomiseScreen bCustScreen = new BurgerCustomiseScreen(this, kitchenScreen);
+            BurgerCustomiseScreen bCustomiseScreen = new BurgerCustomiseScreen(this, kitchenScreen, burger);
             this.Hide();
-            bCustScreen.Show();
+            bCustomiseScreen.Show();
+        }
+
+        private void chickenBoxCustomise_Click(object sender, EventArgs e)
+        {
+            //ChickenBox chickenBox = new ChickenBox();
+            ChickenCustomiseScreen customiseChickenScreen = new ChickenCustomiseScreen(this, kitchenScreen);
+            this.Hide();
+            customiseChickenScreen.Show();
+        }
+
+        private void friesCustomise_Click(object sender, EventArgs e)
+        {
+            Chips chips = new Chips();
+            ChipsCustomiseScreen customiseChipsScreen = new ChipsCustomiseScreen(this, kitchenScreen, chips);
+            this.Hide();
+            customiseChipsScreen.Show();
         }
     }
 }

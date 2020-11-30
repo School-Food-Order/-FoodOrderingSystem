@@ -10,32 +10,32 @@ using System.Windows.Forms;
 
 namespace test
 {
-    public partial class BurgerCustomiseScreen : Form
+    public partial class ChipsCustomiseScreen : Form
     {
 
         KitchenLiveOrderScreen kitchenScreen;
         OrderScreen orderScreen;
-        Burger burger;
+        Chips chips;
 
-        public BurgerCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Burger b)
+        public ChipsCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Chips c)
         {
             InitializeComponent();
-            orderScreen = oS;
             kitchenScreen = kOrderScreen;
-            burger = b;
+            orderScreen = oS;
+            chips = c;
         }
 
-        private void BurgerCustomiseScreen_Load(object sender, EventArgs e)
+        private void ChipsCustomiseScreen_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 2; i++)
             {
-                burgerCustomiseCheckBox.SetItemChecked(i, true);
+                chipsCustomiseCheckBox.SetItemChecked(i, true);
             }
         }
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
-            if (burgerCustomiseCheckBox.SelectedIndex == 1)
+            if (chipsCustomiseCheckBox.SelectedIndex == 1)
             {
 
             }
@@ -52,7 +52,7 @@ namespace test
                 orderScreen.Show();
                 this.Dispose();
             }
-            else 
+            else
             {
                 return;
             }

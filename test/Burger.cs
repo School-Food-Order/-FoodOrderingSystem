@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace test
 {
-    class Burger:Food
+    public class Burger:Food
     {
         //Has access 4 items of FoodMeal:
         //OrderNumbber

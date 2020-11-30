@@ -178,6 +178,7 @@
             this.chickenBoxCustomise.TabIndex = 12;
             this.chickenBoxCustomise.Text = "Customize";
             this.chickenBoxCustomise.UseVisualStyleBackColor = false;
+            this.chickenBoxCustomise.Click += new System.EventHandler(this.chickenBoxCustomise_Click);
             // 
             // friesCustomise
             // 
@@ -188,6 +189,7 @@
             this.friesCustomise.TabIndex = 13;
             this.friesCustomise.Text = "Customize";
             this.friesCustomise.UseVisualStyleBackColor = false;
+            this.friesCustomise.Click += new System.EventHandler(this.friesCustomise_Click);
             // 
             // OrderScreen
             // 
