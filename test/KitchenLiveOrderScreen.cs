@@ -44,6 +44,10 @@ namespace test
             }
         }
 
-        
+        private void KitchenLiveOrderScreen_Load(object sender, EventArgs e)
+        {
+            TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(this);
+            takeOutScreen.Show();
+        }
     }
 }

@@ -13,11 +13,12 @@ namespace test
     public partial class OrderScreen : Form
     {
 
-        KitchenLiveOrderScreen kOrderScreen = new KitchenLiveOrderScreen();
+        KitchenLiveOrderScreen kitchenScreen;
 
-        public OrderScreen()
+        public OrderScreen(KitchenLiveOrderScreen kOrderScreen)
         {
             InitializeComponent();
+            kitchenScreen = kOrderScreen;
         }
 
         private void burgerMealButton_Click(object sender, EventArgs e)
@@ -128,7 +129,7 @@ namespace test
                 return;
             }
 
-            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox, this, kOrderScreen);
+            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox, this, kitchenScreen);
             this.Hide();
             checkoutForm.Show();
         }
@@ -141,7 +142,7 @@ namespace test
 
         private void OrderScreen_Load(object sender, EventArgs e)
         {
-            kOrderScreen.Show();
+            kitchenScreen.Show();
         }
 
         private void orderScreenRemoveButton_Click_1(object sender, EventArgs e)
@@ -152,7 +153,7 @@ namespace test
         private void burgerCustomize_Click(object sender, EventArgs e)
         {
             Burger burger = new Burger();
-            BurgerCustomiseScreen bCustScreen = new BurgerCustomiseScreen(this);
+            BurgerCustomiseScreen bCustScreen = new BurgerCustomiseScreen(this, kitchenScreen);
             this.Hide();
             bCustScreen.Show();
         }

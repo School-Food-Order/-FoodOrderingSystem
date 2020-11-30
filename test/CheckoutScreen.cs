@@ -13,8 +13,8 @@ namespace test
     public partial class CheckoutScreen : Form
     {
 
-        OrderScreen oS;
-        KitchenLiveOrderScreen kos;
+        OrderScreen orderScreen;
+        KitchenLiveOrderScreen kitchenScreen;
 
         public CheckoutScreen(float total, ListBox list, OrderScreen oScreen, KitchenLiveOrderScreen kOScreen)
         {
@@ -26,31 +26,36 @@ namespace test
                 text = item.ToString(); // /n to print each item on new line or you omit /n to print text on same line
                 checkoutListBox.Items.Add(text);
             }
-            oS = oScreen;
-            kos = kOScreen;
+            orderScreen = oScreen;
+            kitchenScreen = kOScreen;
         }
 
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
+            //Order Confirmation
             DialogResult result = MessageBox.Show("Are you sure you want to place this order?", "Order Confirmation", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
+                //user said yes order goes through
+
+                TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(kitchenScreen);
+
                 MessageBox.Show("Thank-you for placing your order, it has been sent to the kitchen to be prepared!", "Order Confirmation", MessageBoxButtons.OK);
+                orderScreen.clearList();
+                takeOutScreen.Show();
                 this.Dispose();
             }
             else
             {
+                //user said no, does nothing
                 return;
             }
-            oS.clearList();
-            oS.Show();
-            this.Dispose();
         }
 
         private void checkoutBackButton_Click(object sender, EventArgs e)
         {
-            oS.Show();
+            orderScreen.Show();
             this.Dispose();
         }
     }

@@ -51,7 +51,6 @@
             this.preparingListBox.Name = "preparingListBox";
             this.preparingListBox.Size = new System.Drawing.Size(346, 550);
             this.preparingListBox.TabIndex = 0;
-            
             // 
             // preparingLabel
             // 
@@ -187,6 +186,7 @@
             this.Controls.Add(this.preparingListBox);
             this.Name = "KitchenLiveOrderScreen";
             this.Text = "KitchenLiveOrderScreen";
+            this.Load += new System.EventHandler(this.KitchenLiveOrderScreen_Load);
             this.orderDetailsPanel.ResumeLayout(false);
             this.orderDetailsPanel.PerformLayout();
             this.ResumeLayout(false);

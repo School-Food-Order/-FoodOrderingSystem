@@ -74,11 +74,11 @@
       <DependentUpon>CheckoutScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Food.cs" />
-    <Compile Include="takeoutSelection.cs">
+    <Compile Include="TakeoutSelectionScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="takeoutSelection.Designer.cs">
-      <DependentUpon>takeoutSelection.cs</DependentUpon>
+    <Compile Include="TakeoutSelectionScreen.Designer.cs">
+      <DependentUpon>TakeoutSelectionScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="KitchenLiveOrderScreen.cs">
       <SubType>Form</SubType>
@@ -109,8 +109,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="takeoutSelection.resx">
-      <DependentUpon>takeoutSelection.cs</DependentUpon>
+    <EmbeddedResource Include="TakeoutSelectionScreen.resx">
+      <DependentUpon>TakeoutSelectionScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

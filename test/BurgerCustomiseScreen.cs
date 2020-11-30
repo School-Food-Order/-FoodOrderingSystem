@@ -13,13 +13,15 @@ namespace test
     public partial class BurgerCustomiseScreen : Form
     {
 
-        OrderScreen os = new OrderScreen();
+        KitchenLiveOrderScreen kitchenScreen;
+        OrderScreen orderScreen;
         Burger b;
 
-        public BurgerCustomiseScreen(OrderScreen oScreen)
+        public BurgerCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen)
         {
             InitializeComponent();
-            os = oScreen;
+            orderScreen = oS;
+            kitchenScreen = kOrderScreen;
         }
 
         private void BurgerCustomiseScreen_Load(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace test
 
             }
 
-            os.Show();
+            orderScreen.Show();
             this.Dispose();
         }
 

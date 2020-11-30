@@ -16,8 +16,11 @@ namespace test
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            KitchenLiveOrderScreen kOrderScreen = new KitchenLiveOrderScreen();
-            Application.Run(new takeoutSelection());
+
+            //initiating starting screens: Kitchen back end screen for staff
+            KitchenLiveOrderScreen kitchenScreen = new KitchenLiveOrderScreen();
+            //Showing the screen
+            Application.Run(kitchenScreen);
         }
     }
 }
