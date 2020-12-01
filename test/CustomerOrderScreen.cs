@@ -31,10 +31,7 @@ namespace test
             burger.NameOfItem = "Burger";
             burger.PriceOfItem = 2.49;
 
-            orderListBox.Items.Add(burger.NameOfItem + " \t\t\t\t £" + burger.PriceOfItem);
-            orderListBox.Items.Add("\tBurger");//Add obj of burger (for customisation)
-            orderListBox.Items.Add("\tChips");//Add obj of chips
-            orderListBox.Items.Add("\tRegular Coke");//Add obj of drink
+            orderListBox.Items.Add(burger.NameOfItem + " \t\t\t\t\t £" + burger.PriceOfItem);
            
             if (!float.TryParse(totalCostTextBox.Text, out totalCost))
             {
@@ -57,9 +54,7 @@ namespace test
             mealObj.PriceOfItem = 6.29;
 
             orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
-            orderListBox.Items.Add("\tBurger");
-            orderListBox.Items.Add("\tChips");
-            orderListBox.Items.Add("\tRegular Coke");
+            
 
             if (!float.TryParse(totalCostTextBox.Text, out totalCost))
             {
@@ -81,9 +76,8 @@ namespace test
             mealObj.NameOfItem = "Chicken wrap";
             mealObj.PriceOfItem = 5.50;
 
-            orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
-            orderListBox.Items.Add("\tChips");
-            orderListBox.Items.Add("\tRegular Coke");
+            orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem.ToString());
+            
 
             if (!float.TryParse(totalCostTextBox.Text, out totalCost))
             {

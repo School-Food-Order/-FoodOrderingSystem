@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TakeoutSelectionScreen));
             this.eatInButton = new System.Windows.Forms.Button();
             this.takeOutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,50 +37,54 @@
             // 
             // eatInButton
             // 
-            this.eatInButton.Location = new System.Drawing.Point(96, 173);
+            this.eatInButton.BackColor = System.Drawing.Color.Pink;
+            this.eatInButton.Image = ((System.Drawing.Image)(resources.GetObject("eatInButton.Image")));
+            this.eatInButton.Location = new System.Drawing.Point(23, 32);
             this.eatInButton.Name = "eatInButton";
-            this.eatInButton.Size = new System.Drawing.Size(267, 227);
+            this.eatInButton.Size = new System.Drawing.Size(525, 525);
             this.eatInButton.TabIndex = 0;
-            this.eatInButton.Text = "Eat In";
-            this.eatInButton.UseVisualStyleBackColor = true;
+            this.eatInButton.UseVisualStyleBackColor = false;
             this.eatInButton.Click += new System.EventHandler(this.eatInButton_Click);
             // 
             // takeOutButton
             // 
-            this.takeOutButton.Location = new System.Drawing.Point(600, 159);
+            this.takeOutButton.BackColor = System.Drawing.Color.Pink;
+            this.takeOutButton.Image = ((System.Drawing.Image)(resources.GetObject("takeOutButton.Image")));
+            this.takeOutButton.Location = new System.Drawing.Point(615, 32);
             this.takeOutButton.Name = "takeOutButton";
-            this.takeOutButton.Size = new System.Drawing.Size(269, 227);
+            this.takeOutButton.Size = new System.Drawing.Size(525, 525);
             this.takeOutButton.TabIndex = 1;
-            this.takeOutButton.Text = "Take Out";
-            this.takeOutButton.UseVisualStyleBackColor = true;
+            this.takeOutButton.UseVisualStyleBackColor = false;
             this.takeOutButton.Click += new System.EventHandler(this.takeoutButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 420);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 587);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 13);
+            this.label1.Size = new System.Drawing.Size(359, 33);
             this.label1.TabIndex = 2;
             this.label1.Text = "Enter your table number:";
             // 
             // tableNumberTextBox
             // 
-            this.tableNumberTextBox.Location = new System.Drawing.Point(194, 417);
+            this.tableNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableNumberTextBox.Location = new System.Drawing.Point(407, 587);
             this.tableNumberTextBox.Name = "tableNumberTextBox";
-            this.tableNumberTextBox.Size = new System.Drawing.Size(169, 20);
+            this.tableNumberTextBox.Size = new System.Drawing.Size(141, 40);
             this.tableNumberTextBox.TabIndex = 3;
             // 
-            // takeoutSelectionScreen
+            // TakeoutSelectionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1184, 761);
             this.Controls.Add(this.tableNumberTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.takeOutButton);
             this.Controls.Add(this.eatInButton);
-            this.Name = "takeoutSelectionScreen";
+            this.Name = "TakeoutSelectionScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Takeout or Eat In";
             this.TopMost = true;
