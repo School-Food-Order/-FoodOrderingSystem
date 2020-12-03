@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace test
 {
     public partial class ChickenCustomiseScreen : Form
@@ -17,11 +18,12 @@ namespace test
         OrderScreen orderScreen;
         ChickenBox chickenBoxMeal = new ChickenBox();//this is where i declare the object
 
-        public ChickenCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen)
+        public ChickenCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, ChickenBox c)
         {
             InitializeComponent();
             kitchenScreen = kOrderScreen;
             orderScreen = oS;
+            chickenBoxMeal = c;
         }
 
         private void ChickenCustomiseScreen_Load(object sender, EventArgs e)
@@ -115,8 +117,19 @@ namespace test
             #endregion Storing items into Object
 
             chickenBoxMeal.PriceOfItem = chickenBoxMeal.ReturnTotalCost();//adds up all the prices of each additional customisation
-            //store This perticular item price to Price of item 
-            //chickenBoxMeal.ReturnAllCustomisation <-- sends an item list with all customisations
+                                                                          //store This perticular item price to Price of item 
+            
+            chickenBoxMeal.ReturnAllCustomisation();
+           
+            
+            
+            chickenBoxMeal.NameOfItem = chickenBoxMeal.getName();
+            
+            
+            
+
+            orderScreen.AddToOrderList(chickenBoxMeal);
+
 
             orderScreen.Show();
             this.Dispose();

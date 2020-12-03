@@ -91,6 +91,8 @@ namespace test
             }
         }
 
+        
+
         private void largeChipsButton_Click(object sender, EventArgs e)
         {
             float totalCost;
@@ -98,7 +100,6 @@ namespace test
             Food mealObj = new Food();
             mealObj.NameOfItem = "Large Chips";
             mealObj.PriceOfItem = 1.89f;
-
             orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
 
             if (!float.TryParse(totalCostTextBox.Text, out totalCost))
@@ -139,9 +140,17 @@ namespace test
             kitchenScreen.Show();
         }
 
+        public void AddToOrderList(Food mealObj) 
+        {
+
+            orderListBox.Items.Add(mealObj.NameOfItem + " £" + mealObj.PriceOfItem.ToString());
+            Console.WriteLine("test");
+            
+        }
+
         private void orderScreenRemoveButton_Click_1(object sender, EventArgs e)
         {
-            
+            orderListBox.Items.Remove(orderListBox.SelectedItem);
         }
 
         private void burgerCustomize_Click(object sender, EventArgs e)
@@ -154,8 +163,8 @@ namespace test
 
         private void chickenBoxCustomise_Click(object sender, EventArgs e)
         {
-            //ChickenBox chickenBox = new ChickenBox();
-            ChickenCustomiseScreen customiseChickenScreen = new ChickenCustomiseScreen(this, kitchenScreen);
+            ChickenBox chickenBox = new ChickenBox();
+            ChickenCustomiseScreen customiseChickenScreen = new ChickenCustomiseScreen(this, kitchenScreen, chickenBox);
             this.Hide();
             customiseChickenScreen.Show();
         }
