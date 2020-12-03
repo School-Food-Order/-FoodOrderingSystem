@@ -139,9 +139,11 @@ namespace test
             kitchenScreen.Show();
         }
 
+        
+
         private void orderScreenRemoveButton_Click_1(object sender, EventArgs e)
         {
-            
+            orderListBox.Items.Remove(orderListBox.SelectedItem);
         }
 
         private void burgerCustomize_Click(object sender, EventArgs e)

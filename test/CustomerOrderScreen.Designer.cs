@@ -226,7 +226,7 @@
         private System.Windows.Forms.Button nuggetMealButton;
         private System.Windows.Forms.Button chickenWrapButton;
         private System.Windows.Forms.Button largeChipsButton;
-        private System.Windows.Forms.ListBox orderListBox;
+        public System.Windows.Forms.ListBox orderListBox;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.TextBox totalCostTextBox;
         private System.Windows.Forms.Button checkoutLabel;

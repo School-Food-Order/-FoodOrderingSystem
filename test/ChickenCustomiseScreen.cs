@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace test
 {
     public partial class ChickenCustomiseScreen : Form
@@ -115,8 +116,9 @@ namespace test
             #endregion Storing items into Object
 
             chickenBoxMeal.PriceOfItem = chickenBoxMeal.ReturnTotalCost();//adds up all the prices of each additional customisation
-            //store This perticular item price to Price of item 
-            //chickenBoxMeal.ReturnAllCustomisation <-- sends an item list with all customisations
+                                                                          //store This perticular item price to Price of item 
+            //OrderScreen order = new OrderScreen(kitchenScreen);
+           // order.orderListBox.Items.Add(chickenBoxMeal.ReturnAllCustomisation()); // <-- sends an item list with all customisations
 
             orderScreen.Show();
             this.Dispose();
