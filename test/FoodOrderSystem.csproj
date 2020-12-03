@@ -59,6 +59,7 @@
     <Compile Include="ChickenCustomiseScreen.Designer.cs">
       <DependentUpon>ChickenCustomiseScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChickenSub.cs" />
     <Compile Include="Chips.cs" />
     <Compile Include="ChipsCustomiseScreen.cs">
       <SubType>Form</SubType>
