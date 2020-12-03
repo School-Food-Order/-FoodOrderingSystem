@@ -18,11 +18,12 @@ namespace test
         OrderScreen orderScreen;
         ChickenBox chickenBoxMeal = new ChickenBox();//this is where i declare the object
 
-        public ChickenCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen)
+        public ChickenCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, ChickenBox c)
         {
             InitializeComponent();
             kitchenScreen = kOrderScreen;
             orderScreen = oS;
+            chickenBoxMeal = c;
         }
 
         private void ChickenCustomiseScreen_Load(object sender, EventArgs e)
@@ -117,8 +118,18 @@ namespace test
 
             chickenBoxMeal.PriceOfItem = chickenBoxMeal.ReturnTotalCost();//adds up all the prices of each additional customisation
                                                                           //store This perticular item price to Price of item 
-            //OrderScreen order = new OrderScreen(kitchenScreen);
-           // order.orderListBox.Items.Add(chickenBoxMeal.ReturnAllCustomisation()); // <-- sends an item list with all customisations
+            
+            chickenBoxMeal.ReturnAllCustomisation();
+           
+            
+            
+            chickenBoxMeal.NameOfItem = chickenBoxMeal.getName();
+            
+            
+            
+
+            orderScreen.AddToOrderList(chickenBoxMeal);
+
 
             orderScreen.Show();
             this.Dispose();

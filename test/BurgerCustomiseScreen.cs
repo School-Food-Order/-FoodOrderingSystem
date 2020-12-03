@@ -22,6 +22,7 @@ namespace test
             InitializeComponent();
             orderScreen = oS;
             kitchenScreen = kOrderScreen;
+            burgerOrder = b;
         }
 
         private void BurgerCustomiseScreen_Load(object sender, EventArgs e)
@@ -127,8 +128,10 @@ namespace test
             #endregion Storing items into Object
 
             burgerOrder.PriceOfItem = burgerOrder.ReturnTotalCost();//adds up all the prices of each additional customisation
-            //store This perticular item price to Price of item 
-            //chickenBoxMeal.ReturnAllCustomisation <-- sends an item list with all customisations
+                                                                    //store This perticular item price to Price of item 
+                                                                    //chickenBoxMeal.ReturnAllCustomisation <-- sends an item list with all customisations
+
+            orderScreen.AddToOrderList(burgerOrder);
 
             orderScreen.Show();
             this.Dispose();
