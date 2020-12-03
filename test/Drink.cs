@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace test
 {
-    class Drink
+    class Drink:Food
     {
 
         //Has access 4 items of FoodMeal:
@@ -101,8 +101,39 @@ namespace test
             //ref line 115
 
             #region AddingToList
-            return customisationList;
+            if (DrinkIce == true)
+            {
+                customisationList.Add("Drink Ice,");
+            }
+            if (DrinkSizeSmall == true)
+            {
+                customisationList.Add("Drink size Small,");
+            }
+            //Extra options
+            if (DrinkExtraIce == true)
+            {
+                customisationList.Add("Drink Extra Ice,");
+            }
+            if (DrinkSizeMed == true)
+            {
+                customisationList.Add("Drink size Medium,");
+            }
+            if (DrinkSizeLrg == true)
+            {
+                customisationList.Add("Drink size Large,");
+            }
+
             #endregion AddingToList
+
+            if (customisationList == null)
+            {
+                customisationList.Add("Error Has Occurred");
+                return customisationList;
+            }
+            else
+            {
+                return customisationList;
+            }
         }
 
     }
