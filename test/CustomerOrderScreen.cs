@@ -154,7 +154,7 @@ namespace test
         private void burgerCustomize_Click(object sender, EventArgs e)
         {
             Burger burger = new Burger();
-            BurgerCustomiseScreen bCustomiseScreen = new BurgerCustomiseScreen(this, kitchenScreen, burger);
+            SubCustomiseScreen bCustomiseScreen = new SubCustomiseScreen(this, kitchenScreen, burger);
             this.Hide();
             bCustomiseScreen.Show();
         }

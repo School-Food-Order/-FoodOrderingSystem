@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace test
 {
-    public partial class BurgerCustomiseScreen : Form
+    public partial class SubCustomiseScreen : Form
     {
 
         KitchenLiveOrderScreen kitchenScreen;
         OrderScreen orderScreen;
         Burger burgerItem = new Burger();
 
-        public BurgerCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Burger b)
+        public SubCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Burger b)
         {
             InitializeComponent();
             orderScreen = oS;

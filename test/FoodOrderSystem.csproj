@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Burger.cs" />
-    <Compile Include="BurgerCustomiseScreen.cs">
+    <Compile Include="BurgerCustomiseScreen - Copy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BurgerCustomiseScreen.Designer.cs">
-      <DependentUpon>BurgerCustomiseScreen.cs</DependentUpon>
+    <Compile Include="BurgerCustomiseScreen - Copy.Designer.cs">
+      <DependentUpon>BurgerCustomiseScreen - Copy.cs</DependentUpon>
     </Compile>
     <Compile Include="ChickenCustomiseScreen.cs">
       <SubType>Form</SubType>
@@ -60,6 +60,12 @@
       <DependentUpon>ChickenCustomiseScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="ChickenSub.cs" />
+    <Compile Include="ChickenSubCustomiseScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChickenSubCustomiseScreen.Designer.cs">
+      <DependentUpon>ChickenSubCustomiseScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chips.cs" />
     <Compile Include="ChipsCustomiseScreen.cs">
       <SubType>Form</SubType>
@@ -102,11 +108,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BurgerCustomiseScreen.resx">
-      <DependentUpon>BurgerCustomiseScreen.cs</DependentUpon>
+    <EmbeddedResource Include="BurgerCustomiseScreen - Copy.resx">
+      <DependentUpon>BurgerCustomiseScreen - Copy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChickenCustomiseScreen.resx">
       <DependentUpon>ChickenCustomiseScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChickenSubCustomiseScreen.resx">
+      <DependentUpon>ChickenSubCustomiseScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChipsCustomiseScreen.resx">
       <DependentUpon>ChipsCustomiseScreen.cs</DependentUpon>
@@ -132,6 +141,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TakeoutSelectionScreen.resx">
       <DependentUpon>TakeoutSelectionScreen.cs</DependentUpon>
@@ -148,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconSubroll.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
