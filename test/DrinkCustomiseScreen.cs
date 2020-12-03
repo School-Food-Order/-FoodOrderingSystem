@@ -15,9 +15,9 @@ namespace test
 
         KitchenLiveOrderScreen kitchenScreen;
         OrderScreen orderScreen;
-        Drink drink;
+        ChickenBox drink;
 
-        public DrinkCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Drink d)
+        public DrinkCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, ChickenBox d)
         {
             InitializeComponent();
             kitchenScreen = kOrderScreen;

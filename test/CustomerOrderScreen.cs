@@ -29,7 +29,7 @@ namespace test
             Burger burger = new Burger();
 
             burger.NameOfItem = "Burger";
-            burger.PriceOfItem = 2.49;
+            burger.PriceOfItem = 2.49f;
 
             orderListBox.Items.Add(burger.NameOfItem + " \t\t\t\t\t £" + burger.PriceOfItem);
            
@@ -51,7 +51,7 @@ namespace test
 
             Food mealObj = new Food();
             mealObj.NameOfItem = "Nugget Meal";
-            mealObj.PriceOfItem = 6.29;
+            mealObj.PriceOfItem = 6.29f;
 
             orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
             
@@ -74,7 +74,7 @@ namespace test
 
             Food mealObj = new Food();
             mealObj.NameOfItem = "Chicken wrap";
-            mealObj.PriceOfItem = 5.50;
+            mealObj.PriceOfItem = 5.50f;
 
             orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem.ToString());
             
@@ -97,7 +97,7 @@ namespace test
 
             Food mealObj = new Food();
             mealObj.NameOfItem = "Large Chips";
-            mealObj.PriceOfItem = 1.89;
+            mealObj.PriceOfItem = 1.89f;
 
             orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
 

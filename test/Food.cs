@@ -10,7 +10,7 @@ namespace test
     {
         private int orderNumber;//Link the orders together with items on the menu
         private string nameOfItem;
-        private double priceOfItem;
+        private float priceOfItem;
 
         //this part is for later addition for discount options
 
@@ -22,7 +22,7 @@ namespace test
             get {return nameOfItem; }
             set { nameOfItem = value; }
         }
-        public double PriceOfItem
+        public float PriceOfItem
         {
             get { return priceOfItem; }
             set { priceOfItem = value; }

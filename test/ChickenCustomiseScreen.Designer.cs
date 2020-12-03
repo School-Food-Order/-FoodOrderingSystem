@@ -76,6 +76,7 @@ namespace test
             this.chickenCustomizeCheckBox.Size = new System.Drawing.Size(425, 292);
             this.chickenCustomizeCheckBox.TabIndex = 6;
             this.chickenCustomizeCheckBox.Tag = "";
+            this.chickenCustomizeCheckBox.SelectedIndexChanged += new System.EventHandler(this.chickenCustomizeCheckBox_SelectedIndexChanged);
             // 
             // addToOrderButton
             // 
