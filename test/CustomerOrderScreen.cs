@@ -167,5 +167,16 @@ namespace test
             this.Hide();
             customiseChipsScreen.Show();
         }
+
+        private void drinkButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void drinkCustomiseButton_Click(object sender, EventArgs e)
+        {
+            Drink drink = new Drink();
+            DrinkCustomiseScreen drinkScreen = new DrinkCustomiseScreen(this, kitchenScreen, drink);
+        }
     }
 }
