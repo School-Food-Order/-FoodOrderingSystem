@@ -15,7 +15,7 @@ namespace test
 
         KitchenLiveOrderScreen kitchenScreen;
         OrderScreen orderScreen;
-        ChickenBox drink;
+        Drink drink;
 
         public DrinkCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Drink d)
         {

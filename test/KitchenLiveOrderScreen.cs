@@ -49,5 +49,10 @@ namespace test
             TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(this);
             takeOutScreen.Show();
         }
+
+        private void preparingListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
