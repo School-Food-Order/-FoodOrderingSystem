@@ -74,6 +74,12 @@
       <DependentUpon>ChipsCustomiseScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="ChickenBox.cs" />
+    <Compile Include="CustomerLiveOrderScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerLiveOrderScreen.Designer.cs">
+      <DependentUpon>CustomerLiveOrderScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerOrderScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <EmbeddedResource Include="ChipsCustomiseScreen.resx">
       <DependentUpon>ChipsCustomiseScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerLiveOrderScreen.resx">
+      <DependentUpon>CustomerLiveOrderScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerOrderScreen.resx">
       <DependentUpon>CustomerOrderScreen.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -161,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconSubroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconHappyGuy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
