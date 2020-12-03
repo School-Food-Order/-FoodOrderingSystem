@@ -47,11 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Burger.cs" />
-    <Compile Include="BurgerCustomiseScreen - Copy.cs">
+    <Compile Include="BurgerCustomiseScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BurgerCustomiseScreen - Copy.Designer.cs">
-      <DependentUpon>BurgerCustomiseScreen - Copy.cs</DependentUpon>
+    <Compile Include="BurgerCustomiseScreen.Designer.cs">
+      <DependentUpon>BurgerCustomiseScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="ChickenCustomiseScreen.cs">
       <SubType>Form</SubType>
@@ -108,8 +108,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BurgerCustomiseScreen - Copy.resx">
-      <DependentUpon>BurgerCustomiseScreen - Copy.cs</DependentUpon>
+    <EmbeddedResource Include="BurgerCustomiseScreen.resx">
+      <DependentUpon>BurgerCustomiseScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChickenCustomiseScreen.resx">
       <DependentUpon>ChickenCustomiseScreen.cs</DependentUpon>

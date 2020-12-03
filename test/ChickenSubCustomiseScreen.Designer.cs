@@ -88,6 +88,7 @@
             this.addToOrderButton.TabIndex = 11;
             this.addToOrderButton.Text = "ADD TO ORDER";
             this.addToOrderButton.UseVisualStyleBackColor = false;
+            this.addToOrderButton.Click += new System.EventHandler(this.addToOrderButton_Click);
             // 
             // burgerPictureBox
             // 
