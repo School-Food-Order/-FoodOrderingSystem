@@ -1,7 +1,7 @@
 ﻿
 namespace test
 {
-    partial class BurgerCustomiseScreen
+    partial class SubCustomiseScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace test
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BurgerCustomiseScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubCustomiseScreen));
             this.burgerPictureBox = new System.Windows.Forms.PictureBox();
             this.addToOrderButton = new System.Windows.Forms.Button();
             this.burgerCustomiseCheckBox = new System.Windows.Forms.CheckedListBox();
@@ -102,7 +102,7 @@ namespace test
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // BurgerCustomiseScreen
+            // SubCustomiseScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,7 +112,7 @@ namespace test
             this.Controls.Add(this.burgerCustomiseCheckBox);
             this.Controls.Add(this.addToOrderButton);
             this.Controls.Add(this.burgerPictureBox);
-            this.Name = "BurgerCustomiseScreen";
+            this.Name = "SubCustomiseScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customize Burger";
             this.Load += new System.EventHandler(this.BurgerCustomiseScreen_Load);

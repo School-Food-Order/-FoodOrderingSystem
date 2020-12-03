@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace test
 {
-    public partial class BurgerCustomiseScreen : Form
+    public partial class SubCustomiseScreen : Form
     {
 
         KitchenLiveOrderScreen kitchenScreen;
         OrderScreen orderScreen;
-        Burger burgerOrder = new Burger();
+        Burger burgerItem = new Burger();
 
-        public BurgerCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Burger b)
+        public SubCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Burger b)
         {
             InitializeComponent();
             orderScreen = oS;
             kitchenScreen = kOrderScreen;
-            burgerOrder = b;
+            burgerItem = b;
         }
 
         private void BurgerCustomiseScreen_Load(object sender, EventArgs e)
@@ -39,99 +39,99 @@ namespace test
            
             if (burgerCustomiseCheckBox.GetItemChecked(0))
             {
-                burgerOrder.BurgerBeefPatty = true;
+                burgerItem.BurgerBeefPatty = true;
             }
             else
             {
-                burgerOrder.BurgerBeefPatty = false;
+                burgerItem.BurgerBeefPatty = false;
             }
             if (burgerCustomiseCheckBox.GetItemChecked(1))
             {
-                burgerOrder.BurgerCheese = true;
+                burgerItem.BurgerCheese = true;
             }
             else
             {
-                burgerOrder.BurgerCheese = false;
+                burgerItem.BurgerCheese = false;
             }
             if (burgerCustomiseCheckBox.GetItemChecked(2))
             {
-                burgerOrder.BurgerPickles = true;
+                burgerItem.BurgerPickles = true;
             }
             else
             {
-                burgerOrder.BurgerPickles = false;
+                burgerItem.BurgerPickles = false;
             }
             if (burgerCustomiseCheckBox.GetItemChecked(3))
             {
-                burgerOrder.BurgerOnions = true;
+                burgerItem.BurgerOnions = true;
             }
             else
             {
-                burgerOrder.BurgerOnions = false;
+                burgerItem.BurgerOnions = false;
             }
             if (burgerCustomiseCheckBox.GetItemChecked(4))
             {
-                burgerOrder.BurgerKetchup = true;
+                burgerItem.BurgerKetchup = true;
             }
             else
             {
-                burgerOrder.BurgerKetchup = false;
+                burgerItem.BurgerKetchup = false;
             }
             if (burgerCustomiseCheckBox.GetItemChecked(5))
             {
-                burgerOrder.BurgerBreadRoll= true;
+                burgerItem.BurgerBreadRoll= true;
             }
             else
             {
-                burgerOrder.BurgerBreadRoll = false;
+                burgerItem.BurgerBreadRoll = false;
             }
             if (burgerCustomiseCheckBox.GetItemChecked(6))
             {
-                burgerOrder.BurgerExtraBeefPatty = true;
+                burgerItem.BurgerExtraBeefPatty = true;
             }
             else
             {
-                burgerOrder.BurgerExtraBeefPatty = false;
+                burgerItem.BurgerExtraBeefPatty = false;
             }
             if (burgerCustomiseCheckBox.GetItemChecked(7))
             {
-                burgerOrder.BurgerExtraCheese = true;
+                burgerItem.BurgerExtraCheese = true;
             }
             else
             {
-                burgerOrder.BurgerExtraCheese = false;
+                burgerItem.BurgerExtraCheese = false;
             }
             if (burgerCustomiseCheckBox.GetItemChecked(8))
             {
-                burgerOrder.BurgerExtraPickles = true;
+                burgerItem.BurgerExtraPickles = true;
             }
             else
             {
-                burgerOrder.BurgerExtraPickles = false;
+                burgerItem.BurgerExtraPickles = false;
             }
             if (burgerCustomiseCheckBox.GetItemChecked(9))
             {
-                burgerOrder.BurgerExtraOnions = true;
+                burgerItem.BurgerExtraOnions = true;
             }
             else
             {
-                burgerOrder.BurgerExtraOnions = false;
+                burgerItem.BurgerExtraOnions = false;
             }
             if (burgerCustomiseCheckBox.GetItemChecked(10))
             {
-                burgerOrder.BurgerExtraKetchup = true;
+                burgerItem.BurgerExtraKetchup = true;
             }
             else
             {
-                burgerOrder.BurgerExtraKetchup = false;
+                burgerItem.BurgerExtraKetchup = false;
             }
             #endregion Storing items into Object
 
-            burgerOrder.PriceOfItem = burgerOrder.ReturnTotalCost();//adds up all the prices of each additional customisation
+            burgerItem.PriceOfItem = burgerItem.ReturnTotalCost();//adds up all the prices of each additional customisation
                                                                     //store This perticular item price to Price of item 
                                                                     //chickenBoxMeal.ReturnAllCustomisation <-- sends an item list with all customisations
 
-            orderScreen.AddToOrderList(burgerOrder);
+            orderScreen.AddToOrderList(burgerItem);
 
             orderScreen.Show();
             this.Dispose();

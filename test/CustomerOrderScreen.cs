@@ -72,11 +72,11 @@ namespace test
         {
             float totalCost;
 
-            Food mealObj = new Food();
-            mealObj.NameOfItem = "Chicken wrap";
-            mealObj.PriceOfItem = 5.50f;
+            //ChickenSub chickenSubItem = new ChickenSub();
+            //chickenSubItem.NameOfItem = "Chicken Sub";
+            //chickenSubItem.PriceOfItem = 5.50f;
 
-            orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem.ToString());
+            //orderListBox.Items.Add(chickenSubItem.NameOfItem + " \t\t\t\t £" + chickenSubItem.PriceOfItem.ToString());
             
 
             if (!float.TryParse(totalCostTextBox.Text, out totalCost))
@@ -86,7 +86,7 @@ namespace test
             }
             else
             {
-                totalCost += (float)(mealObj.PriceOfItem);
+                totalCost += (float)(chickenSubItem.PriceOfItem);
                 totalCostTextBox.Text = totalCost.ToString();
             }
         }
@@ -97,10 +97,10 @@ namespace test
         {
             float totalCost;
 
-            Food mealObj = new Food();
-            mealObj.NameOfItem = "Large Chips";
-            mealObj.PriceOfItem = 1.89f;
-            orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
+            Chips chipsItem = new Chips();
+            chipsItem.NameOfItem = "Large Chips";
+            chipsItem.PriceOfItem = 1.89f;
+            orderListBox.Items.Add(chipsItem.NameOfItem + " \t\t\t\t £" + chipsItem.PriceOfItem);
 
             if (!float.TryParse(totalCostTextBox.Text, out totalCost))
             {
@@ -109,7 +109,7 @@ namespace test
             }
             else
             {
-                totalCost += (float)(mealObj.PriceOfItem);
+                totalCost += (float)(chipsItem.PriceOfItem);
                 totalCostTextBox.Text = totalCost.ToString();
             }
         }
@@ -142,10 +142,8 @@ namespace test
 
         public void AddToOrderList(Food mealObj) 
         {
-
             orderListBox.Items.Add(mealObj.NameOfItem + " £" + mealObj.PriceOfItem.ToString());
             Console.WriteLine("test");
-            
         }
 
         private void orderScreenRemoveButton_Click_1(object sender, EventArgs e)
@@ -156,7 +154,7 @@ namespace test
         private void burgerCustomize_Click(object sender, EventArgs e)
         {
             Burger burger = new Burger();
-            BurgerCustomiseScreen bCustomiseScreen = new BurgerCustomiseScreen(this, kitchenScreen, burger);
+            SubCustomiseScreen bCustomiseScreen = new SubCustomiseScreen(this, kitchenScreen, burger);
             this.Hide();
             bCustomiseScreen.Show();
         }

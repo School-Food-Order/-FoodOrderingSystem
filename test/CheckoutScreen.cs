@@ -39,6 +39,8 @@ namespace test
             {
                 //user said yes order goes through
 
+                //pass order to kitchen
+
                 TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(kitchenScreen);
 
                 MessageBox.Show("Thank-you for placing your order, it has been sent to the kitchen to be prepared!", "Order Confirmation", MessageBoxButtons.OK);
