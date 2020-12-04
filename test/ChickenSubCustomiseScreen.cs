@@ -33,7 +33,7 @@ namespace test
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
-            chickenSubItem.NameOfItem = "Chicken Sub";
+            chickenSubItem.NameOfItem = "Chicken Sub*CUSTOM*";
             #region Storing items into Object
 
 

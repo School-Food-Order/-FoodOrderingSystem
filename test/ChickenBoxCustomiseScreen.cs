@@ -39,7 +39,7 @@ namespace test
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
-            chickenBoxMeal.NameOfItem = "Chicken Box";
+            chickenBoxMeal.NameOfItem = "Chicken Box*CUSTOM*";
 
             //need to use .GetItemChecked(index) to retrieve check state (returns true/false)
             #region Storing items into Object

@@ -35,7 +35,7 @@ namespace test
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
-            burgerItem.NameOfItem = "Burger";
+            burgerItem.NameOfItem = "Burger*CUSTOM*";
 
             #region Storing items into Object
 

@@ -33,11 +33,9 @@
             this.foodReadyListBox = new System.Windows.Forms.ListBox();
             this.collectionReadyLabel = new System.Windows.Forms.Label();
             this.rdyCollectionButton = new System.Windows.Forms.Button();
-            this.outDeliveryButton = new System.Windows.Forms.Button();
             this.returnPrepFromColButton = new System.Windows.Forms.Button();
-            this.returnPrepFromDelButton = new System.Windows.Forms.Button();
             this.orderDetailsPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.orderDetailsTextBox = new System.Windows.Forms.TextBox();
             this.orderDetailsLabel = new System.Windows.Forms.Label();
             this.orderDetailsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -91,15 +89,6 @@
             this.rdyCollectionButton.UseVisualStyleBackColor = true;
             this.rdyCollectionButton.Click += new System.EventHandler(this.rdyCollectionButton_Click);
             // 
-            // outDeliveryButton
-            // 
-            this.outDeliveryButton.Location = new System.Drawing.Point(742, 492);
-            this.outDeliveryButton.Name = "outDeliveryButton";
-            this.outDeliveryButton.Size = new System.Drawing.Size(75, 67);
-            this.outDeliveryButton.TabIndex = 7;
-            this.outDeliveryButton.Text = ">";
-            this.outDeliveryButton.UseVisualStyleBackColor = true;
-            // 
             // returnPrepFromColButton
             // 
             this.returnPrepFromColButton.Location = new System.Drawing.Point(742, 217);
@@ -109,31 +98,22 @@
             this.returnPrepFromColButton.Text = "<";
             this.returnPrepFromColButton.UseVisualStyleBackColor = true;
             // 
-            // returnPrepFromDelButton
-            // 
-            this.returnPrepFromDelButton.Location = new System.Drawing.Point(742, 565);
-            this.returnPrepFromDelButton.Name = "returnPrepFromDelButton";
-            this.returnPrepFromDelButton.Size = new System.Drawing.Size(75, 57);
-            this.returnPrepFromDelButton.TabIndex = 9;
-            this.returnPrepFromDelButton.Text = "<";
-            this.returnPrepFromDelButton.UseVisualStyleBackColor = true;
-            // 
             // orderDetailsPanel
             // 
             this.orderDetailsPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.orderDetailsPanel.Controls.Add(this.textBox1);
+            this.orderDetailsPanel.Controls.Add(this.orderDetailsTextBox);
             this.orderDetailsPanel.Location = new System.Drawing.Point(433, 99);
             this.orderDetailsPanel.Name = "orderDetailsPanel";
             this.orderDetailsPanel.Size = new System.Drawing.Size(292, 595);
             this.orderDetailsPanel.TabIndex = 10;
             // 
-            // textBox1
+            // orderDetailsTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 13);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 566);
-            this.textBox1.TabIndex = 0;
+            this.orderDetailsTextBox.Location = new System.Drawing.Point(18, 13);
+            this.orderDetailsTextBox.Multiline = true;
+            this.orderDetailsTextBox.Name = "orderDetailsTextBox";
+            this.orderDetailsTextBox.Size = new System.Drawing.Size(259, 566);
+            this.orderDetailsTextBox.TabIndex = 0;
             // 
             // orderDetailsLabel
             // 
@@ -154,9 +134,7 @@
             this.ClientSize = new System.Drawing.Size(1501, 761);
             this.Controls.Add(this.orderDetailsLabel);
             this.Controls.Add(this.orderDetailsPanel);
-            this.Controls.Add(this.returnPrepFromDelButton);
             this.Controls.Add(this.returnPrepFromColButton);
-            this.Controls.Add(this.outDeliveryButton);
             this.Controls.Add(this.rdyCollectionButton);
             this.Controls.Add(this.collectionReadyLabel);
             this.Controls.Add(this.foodReadyListBox);
@@ -179,11 +157,9 @@
         private System.Windows.Forms.ListBox foodReadyListBox;
         private System.Windows.Forms.Label collectionReadyLabel;
         private System.Windows.Forms.Button rdyCollectionButton;
-        private System.Windows.Forms.Button outDeliveryButton;
         private System.Windows.Forms.Button returnPrepFromColButton;
-        private System.Windows.Forms.Button returnPrepFromDelButton;
         private System.Windows.Forms.Panel orderDetailsPanel;
         private System.Windows.Forms.Label orderDetailsLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox orderDetailsTextBox;
     }
 }

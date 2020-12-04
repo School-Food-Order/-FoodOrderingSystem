@@ -84,6 +84,7 @@ namespace test
             //creating setting name and price of object
             Chips chipsItem = new Chips();
             chipsItem.NameOfItem = "Medium Chips";
+            chipsItem.PriceOfItem = 1.69f;
             order.addItem(chipsItem);
 
             //adding to customer order list
@@ -124,38 +125,43 @@ namespace test
             {
                 customisationList = burger.ReturnAllCustomisation();
                 totalCost += (float)(burger.PriceOfItem);
+                order.addItem(burger);
                 totalCostTextBox.Text = totalCost.ToString();
-                orderListBox.Items.Add(burger.NameOfItem + " *Custom*" +" \t\t\t\t £" + burger.PriceOfItem);
+                orderListBox.Items.Add(burger.NameOfItem + " \t\t\t\t £" + burger.PriceOfItem);
             }
 
             if (mealObj is ChickenSub chickenSub)
             {
                 customisationList = chickenSub.ReturnAllCustomisation();
                 totalCost += (float)(chickenSub.PriceOfItem);
+                order.addItem(chickenSub);
                 totalCostTextBox.Text = totalCost.ToString();
-                orderListBox.Items.Add(chickenSub.NameOfItem + " *Custom*" + " \t\t\t £" + chickenSub.PriceOfItem);
+                orderListBox.Items.Add(chickenSub.NameOfItem + " \t\t\t £" + chickenSub.PriceOfItem);
             }
 
             if (mealObj is ChickenBox chickenBox)
             {
                 customisationList = chickenBox.ReturnAllCustomisation();
                 totalCost += (float)(chickenBox.PriceOfItem);
+                order.addItem(chickenBox);
                 totalCostTextBox.Text = totalCost.ToString();
-                orderListBox.Items.Add(chickenBox.NameOfItem + "*Custom*" + " \t\t\t £" + chickenBox.PriceOfItem);
+                orderListBox.Items.Add(chickenBox.NameOfItem + " \t\t\t £" + chickenBox.PriceOfItem);
             }
             if (mealObj is Chips chips)
             {
                 customisationList = chips.ReturnAllCustomisation();
                 totalCost += (float)(chips.PriceOfItem);
+                order.addItem(chips);
                 totalCostTextBox.Text = totalCost.ToString();
-                orderListBox.Items.Add(chips.NameOfItem + "*Custom*" + " \t\t\t\t £" + chips.PriceOfItem);
+                orderListBox.Items.Add(chips.NameOfItem + " \t\t\t\t £" + chips.PriceOfItem);
             }
             if (mealObj is Drink drink)
             {
                 customisationList = drink.ReturnAllCustomisation();
                 totalCost += (float)(drink.PriceOfItem);
+                order.addItem(drink);
                 totalCostTextBox.Text = totalCost.ToString();
-                orderListBox.Items.Add(drink.NameOfItem + "*Custom*" + " \t\t\t £" + drink.PriceOfItem);
+                orderListBox.Items.Add(drink.NameOfItem + " \t\t\t £" + drink.PriceOfItem);
             }
 
         }
