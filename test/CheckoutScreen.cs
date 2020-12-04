@@ -44,24 +44,30 @@ namespace test
 
                 //pass order to kitchen
                 kitchenScreen.orderToKitchen(order);
-
+                
+                //@"C:\Users\Public\Documents\"+order.OrderNo+".txt"
+                //saveFile.Filter = "Text (*.txt)|*.txt";
                 var saveFile = new SaveFileDialog();
-                saveFile.Filter = "Text (*.txt)|*.txt";
-                if (saveFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
+                saveFile.FileName = @"C:\Users\Public\Documents\OrderNumber_" + order.OrderNo + ".txt";
 
-                    using (var sw = new StreamWriter(saveFile.FileName, false))
+                //if (saveFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                //{
+
+                //}
+
+                using (var sw = new StreamWriter(saveFile.FileName, false))
+                {
+                    sw.WriteLine("Order Number: " + order.OrderNo);
+                    foreach (var item in checkoutListBox.Items)
                     {
-                        sw.Write("Order Number: ");//ADD ORDERNUMBER HERE
-                        foreach (var item in checkoutListBox.Items)
-                        {
-                            sw.Write(item.ToString() + Environment.NewLine);
-                        }
-                        sw.Write("Total Cost: £"+totalTextBox.Text);
+                        sw.Write(item.ToString() + Environment.NewLine);
                     }
-                                                   
-                    MessageBox.Show("Success");
+                    sw.Write("Total Cost: £" + totalTextBox.Text);
                 }
+                MessageBox.Show("Receipt is being printed");
+
+
+                
 
 
                 TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(kitchenScreen);
