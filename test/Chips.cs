@@ -14,7 +14,7 @@ namespace test
         //NameOfItem
         //ItemCount
 
-        private const float _baseChipsCost = 2.49f;
+        private const float _baseChipsCost = 1.69f;
         private const float _chipsCheeseCost = 0.50f;
         private const float _chipsKetchupDip = 0.00f;
 
