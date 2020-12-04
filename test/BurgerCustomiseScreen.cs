@@ -35,6 +35,7 @@ namespace test
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
+
             #region Storing items into Object
            
             if (burgerCustomiseCheckBox.GetItemChecked(0))

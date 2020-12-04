@@ -170,6 +170,7 @@
             this.chickenSubCustomise.TabIndex = 11;
             this.chickenSubCustomise.Text = "Customize";
             this.chickenSubCustomise.UseVisualStyleBackColor = false;
+            this.chickenSubCustomise.Click += new System.EventHandler(this.chickenSubCustomise_Click);
             // 
             // chickenBoxCustomise
             // 

@@ -15,14 +15,14 @@ namespace test
 
         KitchenLiveOrderScreen kitchenScreen;
         OrderScreen orderScreen;
-        Drink drink;
+        Drink drinkItem = new Drink();
 
-        public DrinkCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Drink d)
+        public DrinkCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen)
         {
+            //DrinkCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Drink d)
             InitializeComponent();
             kitchenScreen = kOrderScreen;
             orderScreen = oS;
-            drink = d;
         }
 
         private void DrinkCustomiseScreen_Load(object sender, EventArgs e)
@@ -31,14 +31,53 @@ namespace test
             {
                 drinkCustomiseCheckBox.SetItemChecked(i, true);
             }
+            smallRadioButton.Checked = true;
+
         }
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
-            if (drinkCustomiseCheckBox.SelectedIndex == 1)
-            {
+            //need to check radio buttons
 
+            #region Storing items into Object
+            if (smallRadioButton.Checked == true)
+            {
+                drinkItem.DrinkSizeSmall = true;
+                drinkItem.DrinkSizeMed = false;
+                drinkItem.DrinkSizeLrg = false;
             }
+            else if (mediumRadioButton.Checked == true)
+            {
+                drinkItem.DrinkSizeSmall = false;
+                drinkItem.DrinkSizeMed = true;
+                drinkItem.DrinkSizeLrg = false;
+            }
+            else if (largeRadioButton.Checked == true)
+            {
+                drinkItem.DrinkSizeSmall = false;
+                drinkItem.DrinkSizeMed = false;
+                drinkItem.DrinkSizeLrg = true;
+            }
+
+            if (drinkCustomiseCheckBox.GetItemChecked(0))
+            {
+                drinkItem.DrinkIce = true;
+            }
+            else
+            {
+                drinkItem.DrinkIce = false;
+            }
+            if (drinkCustomiseCheckBox.GetItemChecked(1))
+            {
+                drinkItem.DrinkExtraIce = true;
+            }
+            else
+            {
+                drinkItem.DrinkExtraIce = false;
+            }
+            #endregion Storing items into Object
+
+
 
             orderScreen.Show();
             this.Dispose();

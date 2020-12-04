@@ -30,7 +30,7 @@
         {
             this.backButton = new System.Windows.Forms.Button();
             this.burgerOptionsLabel = new System.Windows.Forms.Label();
-            this.burgerCustomiseCheckBox = new System.Windows.Forms.CheckedListBox();
+            this.ChickenSubCustomiseCheckBox = new System.Windows.Forms.CheckedListBox();
             this.addToOrderButton = new System.Windows.Forms.Button();
             this.burgerPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.burgerPictureBox)).BeginInit();
@@ -46,6 +46,7 @@
             this.backButton.TabIndex = 14;
             this.backButton.Text = "BACK";
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // burgerOptionsLabel
             // 
@@ -57,11 +58,11 @@
             this.burgerOptionsLabel.TabIndex = 13;
             this.burgerOptionsLabel.Text = "Chicken Sub Options";
             // 
-            // burgerCustomiseCheckBox
+            // ChickenSubCustomiseCheckBox
             // 
-            this.burgerCustomiseCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.burgerCustomiseCheckBox.FormattingEnabled = true;
-            this.burgerCustomiseCheckBox.Items.AddRange(new object[] {
+            this.ChickenSubCustomiseCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChickenSubCustomiseCheckBox.FormattingEnabled = true;
+            this.ChickenSubCustomiseCheckBox.Items.AddRange(new object[] {
             "Chicken Tenders",
             "American Cheese",
             "Lettuce",
@@ -73,16 +74,16 @@
             "Extra Lettuce (+£0.25)",
             "Extra Cucumber(+£0.25)",
             "Extra Sweet Chilli Sauce"});
-            this.burgerCustomiseCheckBox.Location = new System.Drawing.Point(685, 113);
-            this.burgerCustomiseCheckBox.Name = "burgerCustomiseCheckBox";
-            this.burgerCustomiseCheckBox.Size = new System.Drawing.Size(425, 292);
-            this.burgerCustomiseCheckBox.TabIndex = 12;
+            this.ChickenSubCustomiseCheckBox.Location = new System.Drawing.Point(685, 113);
+            this.ChickenSubCustomiseCheckBox.Name = "ChickenSubCustomiseCheckBox";
+            this.ChickenSubCustomiseCheckBox.Size = new System.Drawing.Size(425, 292);
+            this.ChickenSubCustomiseCheckBox.TabIndex = 12;
             // 
             // addToOrderButton
             // 
             this.addToOrderButton.BackColor = System.Drawing.Color.Green;
             this.addToOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addToOrderButton.Location = new System.Drawing.Point(685, 411);
+            this.addToOrderButton.Location = new System.Drawing.Point(685, 410);
             this.addToOrderButton.Name = "addToOrderButton";
             this.addToOrderButton.Size = new System.Drawing.Size(425, 62);
             this.addToOrderButton.TabIndex = 11;
@@ -106,12 +107,13 @@
             this.ClientSize = new System.Drawing.Size(1184, 580);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.burgerOptionsLabel);
-            this.Controls.Add(this.burgerCustomiseCheckBox);
+            this.Controls.Add(this.ChickenSubCustomiseCheckBox);
             this.Controls.Add(this.addToOrderButton);
             this.Controls.Add(this.burgerPictureBox);
             this.Name = "ChickenSubCustomiseScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChickenSubCustomiseScreen";
+            this.Load += new System.EventHandler(this.ChickenSubCustomiseScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.burgerPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -122,7 +124,7 @@
 
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label burgerOptionsLabel;
-        private System.Windows.Forms.CheckedListBox burgerCustomiseCheckBox;
+        private System.Windows.Forms.CheckedListBox ChickenSubCustomiseCheckBox;
         private System.Windows.Forms.Button addToOrderButton;
         private System.Windows.Forms.PictureBox burgerPictureBox;
     }

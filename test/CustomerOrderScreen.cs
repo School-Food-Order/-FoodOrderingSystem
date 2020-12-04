@@ -72,11 +72,11 @@ namespace test
         {
             float totalCost;
 
-            //ChickenSub chickenSubItem = new ChickenSub();
-            //chickenSubItem.NameOfItem = "Chicken Sub";
-            //chickenSubItem.PriceOfItem = 5.50f;
+            ChickenSub chickenSubItem = new ChickenSub();
+            chickenSubItem.NameOfItem = "Chicken Sub";
+            chickenSubItem.PriceOfItem = 5.50f;
 
-            //orderListBox.Items.Add(chickenSubItem.NameOfItem + " \t\t\t\t £" + chickenSubItem.PriceOfItem.ToString());
+            orderListBox.Items.Add(chickenSubItem.NameOfItem + " \t\t\t\t £" + chickenSubItem.PriceOfItem.ToString());
             
 
             if (!float.TryParse(totalCostTextBox.Text, out totalCost))
@@ -177,13 +177,39 @@ namespace test
 
         private void drinkButton_Click(object sender, EventArgs e)
         {
-            
+            float totalCost;
+
+            Drink drinkItem = new Drink();
+            drinkItem.NameOfItem = "Coke";
+            drinkItem.PriceOfItem = 1.89f;
+            orderListBox.Items.Add(drinkItem.NameOfItem + " \t\t\t\t £" + drinkItem.PriceOfItem);
+
+            if (!float.TryParse(totalCostTextBox.Text, out totalCost))
+            {
+                MessageBox.Show("This is a number only field", "Error401", MessageBoxButtons.OK);
+                return;
+            }
+            else
+            {
+                totalCost += (float)(drinkItem.PriceOfItem);
+                totalCostTextBox.Text = totalCost.ToString();
+            }
         }
 
         private void drinkCustomiseButton_Click(object sender, EventArgs e)
         {
-            Drink drink = new Drink();
-            DrinkCustomiseScreen drinkScreen = new DrinkCustomiseScreen(this, kitchenScreen, drink);
+            //Drink drink = new Drink();
+            DrinkCustomiseScreen customiseDrinkScreen = new DrinkCustomiseScreen(this, kitchenScreen);//this, kitchenScreen, drink
+            this.Hide();
+            customiseDrinkScreen.Show();
+        }
+
+        private void chickenSubCustomise_Click(object sender, EventArgs e)
+        {
+            //ChickenSub chickenSub = new ChickenSub();
+            ChickenSubCustomiseScreen customiseChickenSubScreen = new ChickenSubCustomiseScreen(this, kitchenScreen);
+            this.Hide();
+            customiseChickenSubScreen.Show();
         }
     }
 }
