@@ -44,5 +44,12 @@ namespace test
             orderScreen.Show();
             this.Dispose();
         }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            HelpScreen hHelp = new HelpScreen(this);
+            this.Hide();
+            hHelp.Show();
+        }
     }
 }

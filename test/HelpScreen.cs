@@ -12,9 +12,11 @@ namespace test
 {
     public partial class HelpScreen : Form
     {
+        TakeoutSelectionScreen takeOutSelectionScreen;
         public HelpScreen(TakeoutSelectionScreen tS)
         {
             InitializeComponent();
+            takeOutSelectionScreen = tS;
         }
 
         private void checkoutBackButton_Click(object sender, EventArgs e)
@@ -23,6 +25,7 @@ namespace test
             if (result == DialogResult.Yes)
             {
                 this.Dispose();
+                takeOutSelectionScreen.Show();
             }
             else
             {

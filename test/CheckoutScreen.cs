@@ -36,53 +36,55 @@ namespace test
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
-            //Order Confirmation
-            DialogResult result = MessageBox.Show("Are you sure you want to place this order?", "Order Confirmation", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if (int.Parse(totalTextBox.Text) != 0)
             {
-                //user said yes order goes through
-
-                //pass order to kitchen
-                kitchenScreen.orderToKitchen(order);
-                
-                //@"C:\Users\Public\Documents\"+order.OrderNo+".txt"
-                //saveFile.Filter = "Text (*.txt)|*.txt";
-                var saveFile = new SaveFileDialog();
-                saveFile.FileName = @"C:\Users\Public\Documents\OrderNumber_" + order.OrderNo + ".txt";
-
-                //if (saveFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                //{
-
-                //}
-
-                using (var sw = new StreamWriter(saveFile.FileName, false))
+                //Order Confirmation
+                DialogResult result = MessageBox.Show("Are you sure you want to place this order?", "Order Confirmation", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    sw.WriteLine("Order Number: " + order.OrderNo);
-                    foreach (var item in checkoutListBox.Items)
+                    //user said yes order goes through
+
+                    //pass order to kitchen
+                    kitchenScreen.orderToKitchen(order);
+
+                    //@"C:\Users\Public\Documents\"+order.OrderNo+".txt"
+                    //saveFile.Filter = "Text (*.txt)|*.txt";
+                    var saveFile = new SaveFileDialog();
+                    saveFile.FileName = @"C:\Users\Public\Documents\OrderNumber_" + order.OrderNo + ".txt";
+
+                    //if (saveFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    //{
+
+                    //}
+
+                    using (var sw = new StreamWriter(saveFile.FileName, false))
                     {
-                        sw.Write(item.ToString() + Environment.NewLine);
+                        sw.WriteLine("Order Number: " + order.OrderNo);
+                        foreach (var item in checkoutListBox.Items)
+                        {
+                            sw.Write(item.ToString() + Environment.NewLine);
+                        }
+                        sw.Write("Total Cost: £" + totalTextBox.Text);
                     }
-                    sw.Write("Total Cost: £" + totalTextBox.Text);
+                    MessageBox.Show("Receipt is being printed");
+                    TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(kitchenScreen);
+                    MessageBox.Show("Thank-you for placing your order, it has been sent to the kitchen to be prepared!", "Order Confirmation", MessageBoxButtons.OK);
+
+                    orderScreen.Dispose();
+                    takeOutScreen.Show();
+                    this.Dispose();
                 }
-                MessageBox.Show("Receipt is being printed");
-
-
-                
-
-
-                TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(kitchenScreen);
-
-                MessageBox.Show("Thank-you for placing your order, it has been sent to the kitchen to be prepared!", "Order Confirmation", MessageBoxButtons.OK);
-
-                orderScreen.Dispose();
-                takeOutScreen.Show();
-                this.Dispose();
+                else
+                {
+                    //user said no, does nothing
+                    return;
+                }
             }
             else
             {
-                //user said no, does nothing
-                return;
+                MessageBox.Show("Sorry, but you need to select an item to proceed to checkout.");
             }
+            
         }
 
         private void checkoutBackButton_Click(object sender, EventArgs e)

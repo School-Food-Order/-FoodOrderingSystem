@@ -36,7 +36,7 @@
             // checkoutBackButton
             // 
             this.checkoutBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkoutBackButton.Location = new System.Drawing.Point(683, 512);
+            this.checkoutBackButton.Location = new System.Drawing.Point(683, 436);
             this.checkoutBackButton.Name = "checkoutBackButton";
             this.checkoutBackButton.Size = new System.Drawing.Size(89, 37);
             this.checkoutBackButton.TabIndex = 6;
@@ -47,7 +47,7 @@
             // helpRichTextBox
             // 
             this.helpRichTextBox.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.helpRichTextBox.Location = new System.Drawing.Point(12, 99);
+            this.helpRichTextBox.Location = new System.Drawing.Point(12, 23);
             this.helpRichTextBox.Name = "helpRichTextBox";
             this.helpRichTextBox.ReadOnly = true;
             this.helpRichTextBox.Size = new System.Drawing.Size(600, 450);
@@ -58,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(784, 492);
             this.Controls.Add(this.helpRichTextBox);
             this.Controls.Add(this.checkoutBackButton);
             this.Name = "HelpScreen";

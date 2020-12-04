@@ -33,7 +33,7 @@
             this.takeOutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableNumberTextBox = new System.Windows.Forms.TextBox();
-            this.checkoutBackButton = new System.Windows.Forms.Button();
+            this.helpButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // eatInButton
@@ -76,22 +76,23 @@
             this.tableNumberTextBox.Size = new System.Drawing.Size(140, 40);
             this.tableNumberTextBox.TabIndex = 3;
             // 
-            // checkoutBackButton
+            // helpButton
             // 
-            this.checkoutBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkoutBackButton.Location = new System.Drawing.Point(1050, 587);
-            this.checkoutBackButton.Name = "checkoutBackButton";
-            this.checkoutBackButton.Size = new System.Drawing.Size(90, 40);
-            this.checkoutBackButton.TabIndex = 7;
-            this.checkoutBackButton.Text = "Help";
-            this.checkoutBackButton.UseVisualStyleBackColor = true;
+            this.helpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpButton.Location = new System.Drawing.Point(1050, 587);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(90, 40);
+            this.helpButton.TabIndex = 7;
+            this.helpButton.Text = "Help";
+            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
             // TakeoutSelectionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 761);
-            this.Controls.Add(this.checkoutBackButton);
+            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.tableNumberTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.takeOutButton);
@@ -111,6 +112,6 @@
         private System.Windows.Forms.Button takeOutButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tableNumberTextBox;
-        private System.Windows.Forms.Button checkoutBackButton;
+        private System.Windows.Forms.Button helpButton;
     }
 }
