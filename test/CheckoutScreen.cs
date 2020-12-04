@@ -43,6 +43,7 @@ namespace test
                 //user said yes order goes through
 
                 //pass order to kitchen
+                kitchenScreen.orderToKitchen(order);
 
                 var saveFile = new SaveFileDialog();
                 saveFile.Filter = "Text (*.txt)|*.txt";
