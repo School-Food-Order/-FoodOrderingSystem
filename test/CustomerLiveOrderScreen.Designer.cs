@@ -42,7 +42,7 @@
             this.CustomerLOScreen_Preparing.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerLOScreen_Preparing.Location = new System.Drawing.Point(12, 12);
             this.CustomerLOScreen_Preparing.Name = "CustomerLOScreen_Preparing";
-            this.CustomerLOScreen_Preparing.Size = new System.Drawing.Size(360, 40);
+            this.CustomerLOScreen_Preparing.Size = new System.Drawing.Size(500, 40);
             this.CustomerLOScreen_Preparing.TabIndex = 2;
             this.CustomerLOScreen_Preparing.Text = "PREPARING...";
             this.CustomerLOScreen_Preparing.UseVisualStyleBackColor = false;
@@ -51,9 +51,9 @@
             // 
             this.CustomerLOScreen_Collect.BackColor = System.Drawing.Color.Green;
             this.CustomerLOScreen_Collect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerLOScreen_Collect.Location = new System.Drawing.Point(412, 12);
+            this.CustomerLOScreen_Collect.Location = new System.Drawing.Point(587, 12);
             this.CustomerLOScreen_Collect.Name = "CustomerLOScreen_Collect";
-            this.CustomerLOScreen_Collect.Size = new System.Drawing.Size(360, 40);
+            this.CustomerLOScreen_Collect.Size = new System.Drawing.Size(500, 40);
             this.CustomerLOScreen_Collect.TabIndex = 3;
             this.CustomerLOScreen_Collect.Text = "PLEASE COLLECT";
             this.CustomerLOScreen_Collect.UseVisualStyleBackColor = false;
@@ -61,9 +61,9 @@
             // CustomerLOScreen_ListboxCollect
             // 
             this.CustomerLOScreen_ListboxCollect.FormattingEnabled = true;
-            this.CustomerLOScreen_ListboxCollect.Location = new System.Drawing.Point(412, 58);
+            this.CustomerLOScreen_ListboxCollect.Location = new System.Drawing.Point(587, 58);
             this.CustomerLOScreen_ListboxCollect.Name = "CustomerLOScreen_ListboxCollect";
-            this.CustomerLOScreen_ListboxCollect.Size = new System.Drawing.Size(360, 355);
+            this.CustomerLOScreen_ListboxCollect.Size = new System.Drawing.Size(500, 563);
             this.CustomerLOScreen_ListboxCollect.TabIndex = 4;
             // 
             // CustomerLOScreen_ListboxPreparing
@@ -71,15 +71,15 @@
             this.CustomerLOScreen_ListboxPreparing.FormattingEnabled = true;
             this.CustomerLOScreen_ListboxPreparing.Location = new System.Drawing.Point(12, 58);
             this.CustomerLOScreen_ListboxPreparing.Name = "CustomerLOScreen_ListboxPreparing";
-            this.CustomerLOScreen_ListboxPreparing.Size = new System.Drawing.Size(360, 355);
+            this.CustomerLOScreen_ListboxPreparing.Size = new System.Drawing.Size(500, 563);
             this.CustomerLOScreen_ListboxPreparing.TabIndex = 5;
             // 
             // burgerPictureBox
             // 
             this.burgerPictureBox.Image = global::test.Properties.Resources.iconHappyGuy;
-            this.burgerPictureBox.Location = new System.Drawing.Point(778, 163);
+            this.burgerPictureBox.Location = new System.Drawing.Point(1181, 344);
             this.burgerPictureBox.Name = "burgerPictureBox";
-            this.burgerPictureBox.Size = new System.Drawing.Size(250, 250);
+            this.burgerPictureBox.Size = new System.Drawing.Size(251, 254);
             this.burgerPictureBox.TabIndex = 6;
             this.burgerPictureBox.TabStop = false;
             // 
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 561);
+            this.ClientSize = new System.Drawing.Size(1450, 647);
             this.Controls.Add(this.burgerPictureBox);
             this.Controls.Add(this.CustomerLOScreen_ListboxPreparing);
             this.Controls.Add(this.CustomerLOScreen_ListboxCollect);

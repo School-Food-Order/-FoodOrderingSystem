@@ -22,6 +22,12 @@ namespace test
             set { orderNo = value; }
         }
 
+        public List<Food> FoodList
+        {
+            get { return foodList; }
+            set { foodList = value; }
+        }
+
         public void addItem(Food f)
         {
             foodList.Add(f);
