@@ -17,12 +17,13 @@ namespace test
         OrderScreen orderScreen;
         Drink drinkItem = new Drink();
 
-        public DrinkCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen)
+        public DrinkCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Drink d)
         {
             //DrinkCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, Drink d)
             InitializeComponent();
             kitchenScreen = kOrderScreen;
             orderScreen = oS;
+            drinkItem = d;
         }
 
         private void DrinkCustomiseScreen_Load(object sender, EventArgs e)
@@ -38,6 +39,18 @@ namespace test
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
             //need to check radio buttons
+            if (smallRadioButton.Checked)
+            {
+                drinkItem.NameOfItem = "Small Coke";
+            }
+            if (mediumRadioButton.Checked)
+            {
+                drinkItem.NameOfItem = "Medium Coke";
+            }
+            if (largeRadioButton.Checked)
+            {
+                drinkItem.NameOfItem = "Large Coke";
+            }
 
             #region Storing items into Object
             if (smallRadioButton.Checked == true)
@@ -77,7 +90,11 @@ namespace test
             }
             #endregion Storing items into Object
 
+            drinkItem.PriceOfItem = drinkItem.ReturnTotalCost();//adds up all the prices of each additional customisation
+                                                                  //store This perticular item price to Price of item 
+                                                                  //chickenBoxMeal.ReturnAllCustomisation <-- sends an item list with all customisations
 
+            orderScreen.AddToOrderList(drinkItem);
 
             orderScreen.Show();
             this.Dispose();

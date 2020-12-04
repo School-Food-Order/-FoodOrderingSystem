@@ -31,11 +31,7 @@ namespace test
         private bool dipSweetChili = false;
         private bool dipCurry = false;
         private bool dipGravy = false;
-
-
-
-        Food mealObj = new Food();
-        
+     
 
         #region BaseOptions
         public bool ChickenWings
@@ -127,22 +123,18 @@ namespace test
             if (ChickenWings == true)
             {
                 customisationList.Add("Chicken Wing X 6,");
-                mealObj.NameOfItem = "Chicken Wing X 6";
             }
             if (ChickenBreast == true)
             {
                 customisationList.Add("Chicken Wing X 2,");
-                mealObj.NameOfItem = "Chicken Wing X 2";
             }
             if (ChickenDrumstick == true)
             {
                 customisationList.Add("Chicken Drumstick X 2,");
-                mealObj.NameOfItem = "Chicken Drumstick X 2";
             }
             if (ChickenPopcorn == true)
             {
                 customisationList.Add("Popcorn Chicken X 2,");
-                mealObj.NameOfItem = "Popcorn Chicken X 2";
             }
 
             //checking for extra custimisation
@@ -165,10 +157,7 @@ namespace test
             if (DipGravy == true)
             {
                 customisationList.Add("Gravy Dip,");
-            }
-
-            
-
+            }          
             
             #endregion AddingToList
 
@@ -182,11 +171,6 @@ namespace test
                 return customisationList;
             }
 
-        }
-
-        public string getName()
-        {
-            return mealObj.NameOfItem;
         }
 
         

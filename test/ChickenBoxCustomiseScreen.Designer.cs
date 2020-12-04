@@ -1,7 +1,7 @@
 ﻿
 namespace test
 {
-    partial class ChickenCustomiseScreen
+    partial class ChickenBoxCustomiseScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace test
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChickenCustomiseScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChickenBoxCustomiseScreen));
             this.chickenPictureBox = new System.Windows.Forms.PictureBox();
             this.chickenBoxLabel = new System.Windows.Forms.Label();
             this.chickenCustomizeCheckBox = new System.Windows.Forms.CheckedListBox();

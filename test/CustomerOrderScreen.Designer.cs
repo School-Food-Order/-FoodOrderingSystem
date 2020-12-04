@@ -65,7 +65,7 @@
             this.chickenBoxButton.Size = new System.Drawing.Size(150, 150);
             this.chickenBoxButton.TabIndex = 1;
             this.chickenBoxButton.UseVisualStyleBackColor = true;
-            this.chickenBoxButton.Click += new System.EventHandler(this.nuggetMealButton_Click);
+            this.chickenBoxButton.Click += new System.EventHandler(this.chickenBoxButton_Click);
             // 
             // chickenSubButton
             // 

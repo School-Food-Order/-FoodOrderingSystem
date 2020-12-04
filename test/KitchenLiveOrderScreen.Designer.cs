@@ -32,8 +32,6 @@
             this.preparingLabel = new System.Windows.Forms.Label();
             this.foodReadyListBox = new System.Windows.Forms.ListBox();
             this.collectionReadyLabel = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.outDeliveryListBox = new System.Windows.Forms.Label();
             this.rdyCollectionButton = new System.Windows.Forms.Button();
             this.outDeliveryButton = new System.Windows.Forms.Button();
             this.returnPrepFromColButton = new System.Windows.Forms.Button();
@@ -69,7 +67,7 @@
             this.foodReadyListBox.FormattingEnabled = true;
             this.foodReadyListBox.Location = new System.Drawing.Point(844, 99);
             this.foodReadyListBox.Name = "foodReadyListBox";
-            this.foodReadyListBox.Size = new System.Drawing.Size(551, 251);
+            this.foodReadyListBox.Size = new System.Drawing.Size(551, 589);
             this.foodReadyListBox.TabIndex = 2;
             // 
             // collectionReadyLabel
@@ -82,25 +80,6 @@
             this.collectionReadyLabel.Size = new System.Drawing.Size(288, 33);
             this.collectionReadyLabel.TabIndex = 3;
             this.collectionReadyLabel.Text = "Ready For Collection";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(844, 417);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(551, 277);
-            this.listBox1.TabIndex = 4;
-            // 
-            // outDeliveryListBox
-            // 
-            this.outDeliveryListBox.AutoSize = true;
-            this.outDeliveryListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outDeliveryListBox.ForeColor = System.Drawing.SystemColors.Control;
-            this.outDeliveryListBox.Location = new System.Drawing.Point(862, 370);
-            this.outDeliveryListBox.Name = "outDeliveryListBox";
-            this.outDeliveryListBox.Size = new System.Drawing.Size(229, 33);
-            this.outDeliveryListBox.TabIndex = 5;
-            this.outDeliveryListBox.Text = "Out For Delivery";
             // 
             // rdyCollectionButton
             // 
@@ -179,8 +158,6 @@
             this.Controls.Add(this.returnPrepFromColButton);
             this.Controls.Add(this.outDeliveryButton);
             this.Controls.Add(this.rdyCollectionButton);
-            this.Controls.Add(this.outDeliveryListBox);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.collectionReadyLabel);
             this.Controls.Add(this.foodReadyListBox);
             this.Controls.Add(this.preparingLabel);
@@ -201,8 +178,6 @@
         private System.Windows.Forms.Label preparingLabel;
         private System.Windows.Forms.ListBox foodReadyListBox;
         private System.Windows.Forms.Label collectionReadyLabel;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label outDeliveryListBox;
         private System.Windows.Forms.Button rdyCollectionButton;
         private System.Windows.Forms.Button outDeliveryButton;
         private System.Windows.Forms.Button returnPrepFromColButton;

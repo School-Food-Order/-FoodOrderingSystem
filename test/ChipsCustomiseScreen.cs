@@ -34,6 +34,8 @@ namespace test
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
+            chipsOrder.NameOfItem = "Chips";
+
             #region Storing items into Object
             if (chipsCustomiseCheckBox.GetItemChecked(0))
             {
@@ -71,8 +73,8 @@ namespace test
             #endregion Storing items into Object
 
             chipsOrder.PriceOfItem = chipsOrder.ReturnTotalCost();//adds up all the prices of each additional customisation
-            //store This perticular item price to Price of item 
-            //chickenBoxMeal.ReturnAllCustomisation <-- sends an item list with all customisations
+                                                                  //store This perticular item price to Price of item 
+            orderScreen.AddToOrderList(chipsOrder);
 
             orderScreen.Show();
             this.Dispose();

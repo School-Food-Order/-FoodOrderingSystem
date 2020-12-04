@@ -11,7 +11,6 @@ namespace test
         private int orderNumber;//Link the orders together with items on the menu
         private string nameOfItem;
         private float priceOfItem;
-        private List<string> customisationList;
 
 
         //this part is for later addition for discount options
@@ -35,10 +34,5 @@ namespace test
             set { orderNumber = value; }
         }
 
-        public List<string> Customisation
-        {
-            get { return customisationList; }
-            set { customisationList = value; }
-        }
     }
 }

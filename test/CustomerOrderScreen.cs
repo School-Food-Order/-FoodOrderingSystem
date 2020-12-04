@@ -45,12 +45,12 @@ namespace test
 
         }
 
-        private void nuggetMealButton_Click(object sender, EventArgs e)
+        private void chickenBoxButton_Click(object sender, EventArgs e)
         {
             float totalCost;
 
             Food mealObj = new Food();
-            mealObj.NameOfItem = "Nugget Meal";
+            mealObj.NameOfItem = "Chicken Box";
             mealObj.PriceOfItem = 6.29f;
 
             orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
@@ -74,7 +74,7 @@ namespace test
 
             ChickenSub chickenSubItem = new ChickenSub();
             chickenSubItem.NameOfItem = "Chicken Sub";
-            chickenSubItem.PriceOfItem = 5.50f;
+            chickenSubItem.PriceOfItem = 3.39f;
 
             orderListBox.Items.Add(chickenSubItem.NameOfItem + " \t\t\t\t £" + chickenSubItem.PriceOfItem.ToString());
             
@@ -95,23 +95,16 @@ namespace test
 
         private void largeChipsButton_Click(object sender, EventArgs e)
         {
-            float totalCost;
+            float totalCost = float.Parse(totalCostTextBox.Text);
 
             Chips chipsItem = new Chips();
             chipsItem.NameOfItem = "Large Chips";
             chipsItem.PriceOfItem = 1.89f;
             orderListBox.Items.Add(chipsItem.NameOfItem + " \t\t\t\t £" + chipsItem.PriceOfItem);
 
-            if (!float.TryParse(totalCostTextBox.Text, out totalCost))
-            {
-                MessageBox.Show("This is a number only field", "Error401", MessageBoxButtons.OK);
-                return;
-            }
-            else
-            {
-                totalCost += (float)(chipsItem.PriceOfItem);
-                totalCostTextBox.Text = totalCost.ToString();
-            }
+           
+            totalCost += (float)(chipsItem.PriceOfItem);
+            totalCostTextBox.Text = totalCost.ToString();
         }
 
         private void checkoutLabel_Click(object sender, EventArgs e)
@@ -140,10 +133,50 @@ namespace test
             kitchenScreen.Show();
         }
 
-        public void AddToOrderList(Food mealObj) 
+        public void AddToOrderList(Food mealObj)
         {
-            orderListBox.Items.Add(mealObj.NameOfItem + " £" + mealObj.PriceOfItem.ToString());
-            Console.WriteLine("test");
+            List<string> customisationList;
+            float totalCost = float.Parse(totalCostTextBox.Text);
+
+
+            if (mealObj is Burger burger)
+            {
+                customisationList = burger.ReturnAllCustomisation();
+                totalCost += (float)(burger.PriceOfItem);
+                totalCostTextBox.Text = totalCost.ToString();
+                orderListBox.Items.Add(burger.NameOfItem + " *Custom*" +" \t\t\t\t £" + burger.PriceOfItem);
+            }
+
+            if (mealObj is ChickenSub chickenSub)
+            {
+                customisationList = chickenSub.ReturnAllCustomisation();
+                totalCost += (float)(chickenSub.PriceOfItem);
+                totalCostTextBox.Text = totalCost.ToString();
+                orderListBox.Items.Add(chickenSub.NameOfItem + " *Custom*" + " \t\t\t £" + chickenSub.PriceOfItem);
+            }
+
+            if (mealObj is ChickenBox chickenBox)
+            {
+                customisationList = chickenBox.ReturnAllCustomisation();
+                totalCost += (float)(chickenBox.PriceOfItem);
+                totalCostTextBox.Text = totalCost.ToString();
+                orderListBox.Items.Add(chickenBox.NameOfItem + "*Custom*" + " \t\t\t £" + chickenBox.PriceOfItem);
+            }
+            if (mealObj is Chips chips)
+            {
+                customisationList = chips.ReturnAllCustomisation();
+                totalCost += (float)(chips.PriceOfItem);
+                totalCostTextBox.Text = totalCost.ToString();
+                orderListBox.Items.Add(chips.NameOfItem + "*Custom*" + " \t\t\t\t £" + chips.PriceOfItem);
+            }
+            if (mealObj is Drink drink)
+            {
+                customisationList = drink.ReturnAllCustomisation();
+                totalCost += (float)(drink.PriceOfItem);
+                totalCostTextBox.Text = totalCost.ToString();
+                orderListBox.Items.Add(drink.NameOfItem + "*Custom*" + " \t\t\t £" + drink.PriceOfItem);
+            }
+
         }
 
         private void orderScreenRemoveButton_Click_1(object sender, EventArgs e)
@@ -162,7 +195,7 @@ namespace test
         private void chickenBoxCustomise_Click(object sender, EventArgs e)
         {
             ChickenBox chickenBox = new ChickenBox();
-            ChickenCustomiseScreen customiseChickenScreen = new ChickenCustomiseScreen(this, kitchenScreen, chickenBox);
+            ChickenBoxCustomiseScreen customiseChickenScreen = new ChickenBoxCustomiseScreen(this, kitchenScreen, chickenBox);
             this.Hide();
             customiseChickenScreen.Show();
         }
@@ -180,8 +213,8 @@ namespace test
             float totalCost;
 
             Drink drinkItem = new Drink();
-            drinkItem.NameOfItem = "Coke";
-            drinkItem.PriceOfItem = 1.89f;
+            drinkItem.NameOfItem = "Medium Coke";
+            drinkItem.PriceOfItem = 1.69f;
             orderListBox.Items.Add(drinkItem.NameOfItem + " \t\t\t\t £" + drinkItem.PriceOfItem);
 
             if (!float.TryParse(totalCostTextBox.Text, out totalCost))
@@ -198,16 +231,16 @@ namespace test
 
         private void drinkCustomiseButton_Click(object sender, EventArgs e)
         {
-            //Drink drink = new Drink();
-            DrinkCustomiseScreen customiseDrinkScreen = new DrinkCustomiseScreen(this, kitchenScreen);//this, kitchenScreen, drink
+            Drink drink = new Drink();
+            DrinkCustomiseScreen customiseDrinkScreen = new DrinkCustomiseScreen(this, kitchenScreen, drink);//this, kitchenScreen, drink
             this.Hide();
             customiseDrinkScreen.Show();
         }
 
         private void chickenSubCustomise_Click(object sender, EventArgs e)
         {
-            //ChickenSub chickenSub = new ChickenSub();
-            ChickenSubCustomiseScreen customiseChickenSubScreen = new ChickenSubCustomiseScreen(this, kitchenScreen);
+            ChickenSub chickenSub = new ChickenSub();
+            ChickenSubCustomiseScreen customiseChickenSubScreen = new ChickenSubCustomiseScreen(this, kitchenScreen, chickenSub);
             this.Hide();
             customiseChickenSubScreen.Show();
         }

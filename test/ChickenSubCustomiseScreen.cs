@@ -16,11 +16,12 @@ namespace test
         OrderScreen orderScreen;
         ChickenSub chickenSubItem = new ChickenSub();
 
-        public ChickenSubCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen)
+        public ChickenSubCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, ChickenSub cs)
         {
             InitializeComponent();
             kitchenScreen = kOrderScreen;
             orderScreen = oS;
+            chickenSubItem = cs;
         }
         private void ChickenSubCustomiseScreen_Load(object sender, EventArgs e)
         {
@@ -32,8 +33,10 @@ namespace test
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
-
+            chickenSubItem.NameOfItem = "Chicken Sub";
             #region Storing items into Object
+
+
 
             if (ChickenSubCustomiseCheckBox.GetItemChecked(0))
             {
@@ -126,7 +129,14 @@ namespace test
                 chickenSubItem.ChickenSubExtraChiliSauce = false;
             }
             #endregion Storing items into Object
+            chickenSubItem.PriceOfItem = chickenSubItem.ReturnTotalCost();//adds up all the prices of each additional customisation
+                                                                  //store This perticular item price to Price of item 
+                                                                  //chickenBoxMeal.ReturnAllCustomisation <-- sends an item list with all customisations
 
+            orderScreen.AddToOrderList(chickenSubItem);
+
+            orderScreen.Show();
+            this.Dispose();
 
 
         }

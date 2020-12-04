@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace test
 {
-    public partial class ChickenCustomiseScreen : Form
+    public partial class ChickenBoxCustomiseScreen : Form
     {
 
         KitchenLiveOrderScreen kitchenScreen;
         OrderScreen orderScreen;
         ChickenBox chickenBoxMeal = new ChickenBox();//this is where i declare the object
 
-        public ChickenCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, ChickenBox c)
+        public ChickenBoxCustomiseScreen(OrderScreen oS, KitchenLiveOrderScreen kOrderScreen, ChickenBox c)
         {
             InitializeComponent();
             kitchenScreen = kOrderScreen;
@@ -39,6 +39,8 @@ namespace test
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
+            chickenBoxMeal.NameOfItem = "Chicken Box";
+
             //need to use .GetItemChecked(index) to retrieve check state (returns true/false)
             #region Storing items into Object
             if (chickenCustomizeCheckBox.GetItemChecked(0))
@@ -116,18 +118,9 @@ namespace test
 
             #endregion Storing items into Object
 
-            chickenBoxMeal.PriceOfItem = chickenBoxMeal.ReturnTotalCost();//adds up all the prices of each additional customisation
-                                                                          //store This perticular item price to Price of item 
-            
-            chickenBoxMeal.ReturnAllCustomisation();
-           
-            
-            
-            chickenBoxMeal.NameOfItem = chickenBoxMeal.getName();
-            
-            
-            
-
+            chickenBoxMeal.PriceOfItem = chickenBoxMeal.ReturnTotalCost();  //adds up all the prices of each additional customisation
+                                                                            //store This perticular item price to Price of item             
+                              
             orderScreen.AddToOrderList(chickenBoxMeal);
 
 

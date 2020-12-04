@@ -53,11 +53,11 @@
     <Compile Include="BurgerCustomiseScreen.Designer.cs">
       <DependentUpon>BurgerCustomiseScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChickenCustomiseScreen.cs">
+    <Compile Include="ChickenBoxCustomiseScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChickenCustomiseScreen.Designer.cs">
-      <DependentUpon>ChickenCustomiseScreen.cs</DependentUpon>
+    <Compile Include="ChickenBoxCustomiseScreen.Designer.cs">
+      <DependentUpon>ChickenBoxCustomiseScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="ChickenSub.cs" />
     <Compile Include="ChickenSubCustomiseScreen.cs">
@@ -117,8 +117,8 @@
     <EmbeddedResource Include="BurgerCustomiseScreen.resx">
       <DependentUpon>BurgerCustomiseScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChickenCustomiseScreen.resx">
-      <DependentUpon>ChickenCustomiseScreen.cs</DependentUpon>
+    <EmbeddedResource Include="ChickenBoxCustomiseScreen.resx">
+      <DependentUpon>ChickenBoxCustomiseScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChickenSubCustomiseScreen.resx">
       <DependentUpon>ChickenSubCustomiseScreen.cs</DependentUpon>

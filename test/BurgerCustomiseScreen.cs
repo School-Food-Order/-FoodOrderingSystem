@@ -35,9 +35,11 @@ namespace test
 
         private void addToOrderButton_Click(object sender, EventArgs e)
         {
+            burgerItem.NameOfItem = "Burger";
 
             #region Storing items into Object
-           
+
+
             if (burgerCustomiseCheckBox.GetItemChecked(0))
             {
                 burgerItem.BurgerBeefPatty = true;

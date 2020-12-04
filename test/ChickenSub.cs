@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace test
 {
-    class ChickenSub:Food
+    public class ChickenSub:Food
     {
         private const float _baseChickenSubPrice = 3.39f;
         private const float _chickenSubExtraChickenTendersCost = 0.89f;
