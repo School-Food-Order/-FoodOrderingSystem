@@ -16,9 +16,10 @@ namespace test
 
         OrderScreen orderScreen;
         KitchenLiveOrderScreen kitchenScreen;
+        CustomerLiveOrderScreen customerScreen;
         Order order;
 
-        public CheckoutScreen(float total, ListBox list, Order orderObject, OrderScreen oScreen, KitchenLiveOrderScreen kOScreen)
+        public CheckoutScreen(float total, ListBox list, Order orderObject, OrderScreen oScreen, KitchenLiveOrderScreen kOScreen, CustomerLiveOrderScreen custScreenObject)
         {
             InitializeComponent();
             totalTextBox.Text = total.ToString();
@@ -31,6 +32,7 @@ namespace test
             order = orderObject;
             orderScreen = oScreen;
             kitchenScreen = kOScreen;
+            customerScreen = custScreenObject;
         }
 
 
@@ -44,6 +46,7 @@ namespace test
 
                 //pass order to kitchen
                 kitchenScreen.orderToKitchen(order);
+                customerScreen.orderToCustomer(order);
                 
                 //@"C:\Users\Public\Documents\"+order.OrderNo+".txt"
                 //saveFile.Filter = "Text (*.txt)|*.txt";
@@ -70,7 +73,7 @@ namespace test
                 
 
 
-                TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(kitchenScreen);
+                TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(kitchenScreen, customerScreen);
 
                 MessageBox.Show("Thank-you for placing your order, it has been sent to the kitchen to be prepared!", "Order Confirmation", MessageBoxButtons.OK);
 
