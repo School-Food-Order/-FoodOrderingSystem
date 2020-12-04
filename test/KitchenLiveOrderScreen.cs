@@ -129,19 +129,49 @@ namespace test
             orderDetailsTextBox.Clear(); // clears previous order details
 
             if (preparingListBox.SelectedIndex == -1)
-                MessageBox.Show("Please select an Item first!");
-
-            string currentlySelected = preparingListBox.SelectedItem.ToString();
-            char[] charsToTrim = { 'O', 'r', 'd', 'e', ' ' };
-            currentlySelected = currentlySelected.Trim(charsToTrim);
-            int x = int.Parse(currentlySelected);
-
-
-            foreach (var item in pastOrders)
             {
-                if (item.OrderNo == x)
+                MessageBox.Show("Please select an Item first!");
+            }
+            else
+            {
+                string currentlySelected = preparingListBox.SelectedItem.ToString();
+                char[] charsToTrim = { 'O', 'r', 'd', 'e', ' ' };
+                currentlySelected = currentlySelected.Trim(charsToTrim);
+                int x = int.Parse(currentlySelected);
+
+
+                foreach (var item in pastOrders)
                 {
-                    showOrderDetails(item);
+                    if (item.OrderNo == x)
+                    {
+                        showOrderDetails(item);
+                    }
+                }
+            }
+        }
+
+        private void foodReadyListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            orderDetailsTextBox.Clear(); // clears previous order details
+
+            if (preparingListBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select an Item first!");
+            }
+            else
+            {
+                string currentlySelected = preparingListBox.SelectedItem.ToString();
+                char[] charsToTrim = { 'O', 'r', 'd', 'e', ' ' };
+                currentlySelected = currentlySelected.Trim(charsToTrim);
+                int x = int.Parse(currentlySelected);
+
+
+                foreach (var item in pastOrders)
+                {
+                    if (item.OrderNo == x)
+                    {
+                        showOrderDetails(item);
+                    }
                 }
             }
         }

@@ -33,10 +33,10 @@
             this.foodReadyListBox = new System.Windows.Forms.ListBox();
             this.collectionReadyLabel = new System.Windows.Forms.Label();
             this.rdyCollectionButton = new System.Windows.Forms.Button();
-            this.returnPrepFromColButton = new System.Windows.Forms.Button();
             this.orderDetailsPanel = new System.Windows.Forms.Panel();
             this.orderDetailsTextBox = new System.Windows.Forms.TextBox();
             this.orderDetailsLabel = new System.Windows.Forms.Label();
+            this.returnPrepFromColButton = new System.Windows.Forms.Button();
             this.orderDetailsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,7 @@
             this.foodReadyListBox.Name = "foodReadyListBox";
             this.foodReadyListBox.Size = new System.Drawing.Size(551, 589);
             this.foodReadyListBox.TabIndex = 2;
+            this.foodReadyListBox.SelectedIndexChanged += new System.EventHandler(this.foodReadyListBox_SelectedIndexChanged);
             // 
             // collectionReadyLabel
             // 
@@ -89,15 +90,6 @@
             this.rdyCollectionButton.UseVisualStyleBackColor = true;
             this.rdyCollectionButton.Click += new System.EventHandler(this.rdyCollectionButton_Click);
             // 
-            // returnPrepFromColButton
-            // 
-            this.returnPrepFromColButton.Location = new System.Drawing.Point(742, 217);
-            this.returnPrepFromColButton.Name = "returnPrepFromColButton";
-            this.returnPrepFromColButton.Size = new System.Drawing.Size(75, 56);
-            this.returnPrepFromColButton.TabIndex = 8;
-            this.returnPrepFromColButton.Text = "<";
-            this.returnPrepFromColButton.UseVisualStyleBackColor = true;
-            // 
             // orderDetailsPanel
             // 
             this.orderDetailsPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -112,6 +104,7 @@
             this.orderDetailsTextBox.Location = new System.Drawing.Point(18, 13);
             this.orderDetailsTextBox.Multiline = true;
             this.orderDetailsTextBox.Name = "orderDetailsTextBox";
+            this.orderDetailsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.orderDetailsTextBox.Size = new System.Drawing.Size(259, 566);
             this.orderDetailsTextBox.TabIndex = 0;
             // 
@@ -125,6 +118,15 @@
             this.orderDetailsLabel.Size = new System.Drawing.Size(188, 33);
             this.orderDetailsLabel.TabIndex = 11;
             this.orderDetailsLabel.Text = "Order Details";
+            // 
+            // returnPrepFromColButton
+            // 
+            this.returnPrepFromColButton.Location = new System.Drawing.Point(742, 217);
+            this.returnPrepFromColButton.Name = "returnPrepFromColButton";
+            this.returnPrepFromColButton.Size = new System.Drawing.Size(75, 56);
+            this.returnPrepFromColButton.TabIndex = 8;
+            this.returnPrepFromColButton.Text = "<";
+            this.returnPrepFromColButton.UseVisualStyleBackColor = true;
             // 
             // KitchenLiveOrderScreen
             // 
@@ -157,9 +159,9 @@
         private System.Windows.Forms.ListBox foodReadyListBox;
         private System.Windows.Forms.Label collectionReadyLabel;
         private System.Windows.Forms.Button rdyCollectionButton;
-        private System.Windows.Forms.Button returnPrepFromColButton;
         private System.Windows.Forms.Panel orderDetailsPanel;
         private System.Windows.Forms.Label orderDetailsLabel;
         private System.Windows.Forms.TextBox orderDetailsTextBox;
+        private System.Windows.Forms.Button returnPrepFromColButton;
     }
 }
