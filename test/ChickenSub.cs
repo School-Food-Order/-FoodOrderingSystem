@@ -138,50 +138,50 @@ namespace test
 
             if (ChickenSubChickenTenders == true)
             {
-                customisationList.Add("Chicken Tenders,");
+                customisationList.Add("Chicken Tenders");
             }
             if (ChickenSubAmericanCheese == true)
             {
-                customisationList.Add("American Cheese,");
+                customisationList.Add("American Cheese");
             }
             if (ChickenSubLettuce == true)
             {
-                customisationList.Add("Lettuce,");
+                customisationList.Add("Lettuce");
             }
             if (ChickenSubCucumber == true)
             {
-                customisationList.Add("Cucumber,");
+                customisationList.Add("Cucumber");
             }
             if (ChickenSubSweetChiliSauce == true)
             {
-                customisationList.Add("Sweet Chili Sauce,");
+                customisationList.Add("Sweet Chili Sauce");
             }
             if (ChickenSubBageutteRoll == true)
             {
-                customisationList.Add("Bageutte Roll,");
+                customisationList.Add("Bageutte Roll");
             }
 
             //checking for extra customisation
 
             if (ChickenSubExtraChickenTenders == true)
             {
-                customisationList.Add("Extra Chicken Tenders,");
+                customisationList.Add("Extra Chicken Tenders");
             }
             if (ChickenSubExtraAmericanCheese == true)
             {
-                customisationList.Add("Extra American Cheese,");
+                customisationList.Add("Extra American Cheese");
             }
             if (ChickenSubExtraLettuce == true)
             {
-                customisationList.Add("Extra Lettuce,");
+                customisationList.Add("Extra Lettuce");
             }
             if (ChickenSubExtraCucumber == true)
             {
-                customisationList.Add("Extra Cucumber,");
+                customisationList.Add("Extra Cucumber");
             }
             if (ChickenSubExtraChiliSauce == true)
             {
-                customisationList.Add("Extra Chili Sauce,");
+                customisationList.Add("Extra Chili Sauce");
             }
 
             #endregion AddingToList
