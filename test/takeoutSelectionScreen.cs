@@ -19,12 +19,13 @@ namespace test
         {
             InitializeComponent();
             kitchenScreen = kOrderScreen;
+            kOrderScreen.incrementOrderNo();
         }
         
         private void eatInButton_Click(object sender, EventArgs e)
         {
-
-            OrderScreen orderScreen = new OrderScreen(kitchenScreen);
+            Order order = new Order(kitchenScreen);
+            OrderScreen orderScreen = new OrderScreen(kitchenScreen, order);
 
             if (!int.TryParse(tableNumberTextBox.Text, out int tableNumber))
             {
@@ -38,7 +39,8 @@ namespace test
 
         private void takeoutButton_Click(object sender, EventArgs e)
         {
-            OrderScreen orderScreen = new OrderScreen(kitchenScreen);
+            Order order = new Order(kitchenScreen);
+            OrderScreen orderScreen = new OrderScreen(kitchenScreen, order);
             orderScreen.Show();
             this.Dispose();
         }

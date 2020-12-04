@@ -146,49 +146,49 @@ namespace test
 
             if (BurgerBeefPatty == true)
             {
-                customisationList.Add("BeefPatty,");
+                customisationList.Add("BeefPatty");
                 //they can have base: (BeefPatty =! true && ExtraBeefPatty == true), so we have to check individually 
             }
             if (BurgerCheese == true)
             {
-                customisationList.Add("Cheese,");
+                customisationList.Add("Cheese");
             }
             if (BurgerPickles== true)
             {
-                customisationList.Add("Pickles,");
+                customisationList.Add("Pickles");
             }
             if (BurgerOnions == true)
             {
-                customisationList.Add("Onions,");
+                customisationList.Add("Onions");
             }
             if (BurgerKetchup == true)
             {
-                customisationList.Add("Ketchup,");
+                customisationList.Add("Ketchup");
             }
             if (BurgerBreadRoll == true)
             {
-                customisationList.Add("BreadRoll,");
+                customisationList.Add("BreadRoll");
             }
             //checking for extra customisation
             if (BurgerExtraBeefPatty == true)
             {
-                customisationList.Add("ExtraBeefPatty,");
+                customisationList.Add("ExtraBeefPatty");
             }
             if (BurgerExtraCheese == true)
             {
-                customisationList.Add("ExtraCheese,");
+                customisationList.Add("ExtraCheese");
             }
             if (BurgerExtraPickles == true)
             {
-                customisationList.Add("ExtraPickles,");
+                customisationList.Add("ExtraPickles");
             }
             if (BurgerExtraOnions)
             {
-                customisationList.Add("ExtraOnions,");
+                customisationList.Add("ExtraOnions");
             }
             if (BurgerExtraKetchup == true)
             {
-                customisationList.Add("ExtraKetchup,");
+                customisationList.Add("ExtraKetchup");
             }
             #endregion AddingToList
 

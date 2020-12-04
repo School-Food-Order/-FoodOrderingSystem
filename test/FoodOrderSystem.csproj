@@ -100,6 +100,7 @@
       <DependentUpon>DrinkCustomiseScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Food.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="HelpScreen.cs">
       <SubType>Form</SubType>
     </Compile>

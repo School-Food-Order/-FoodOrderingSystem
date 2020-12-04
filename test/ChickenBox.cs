@@ -122,41 +122,41 @@ namespace test
 
             if (ChickenWings == true)
             {
-                customisationList.Add("Chicken Wing X 6,");
+                customisationList.Add("Chicken Wing X 6");
             }
             if (ChickenBreast == true)
             {
-                customisationList.Add("Chicken Wing X 2,");
+                customisationList.Add("Chicken Wing X 2");
             }
             if (ChickenDrumstick == true)
             {
-                customisationList.Add("Chicken Drumstick X 2,");
+                customisationList.Add("Chicken Drumstick X 2");
             }
             if (ChickenPopcorn == true)
             {
-                customisationList.Add("Popcorn Chicken X 2,");
+                customisationList.Add("Popcorn Chicken X 2");
             }
 
             //checking for extra custimisation
             if (DipKetchup == true)
             {
-                customisationList.Add("Ketchup Dip,");
+                customisationList.Add("Ketchup Dip");
             }
             if (DipBBQ == true)
             {
-                customisationList.Add("BBQ Dip,");
+                customisationList.Add("BBQ Dip");
             }
             if (DipSweetChili == true)
             {
-                customisationList.Add("SweetChili Dip,");
+                customisationList.Add("SweetChili Dip");
             }
             if (DipCurry == true)
             {
-                customisationList.Add("Curry Dip,");
+                customisationList.Add("Curry Dip");
             }
             if (DipGravy == true)
             {
-                customisationList.Add("Gravy Dip,");
+                customisationList.Add("Gravy Dip");
             }          
             
             #endregion AddingToList

@@ -12,112 +12,93 @@ namespace test
 {
     public partial class OrderScreen : Form
     {
-
+        private int orderNo;
         KitchenLiveOrderScreen kitchenScreen;
+        Order order;
 
-        public OrderScreen(KitchenLiveOrderScreen kOrderScreen)
+        public OrderScreen(KitchenLiveOrderScreen kOrderScreen, Order orderObject)
         {
             InitializeComponent();
             kitchenScreen = kOrderScreen;
+            order = orderObject;
         }
 
         private void burgerMealButton_Click(object sender, EventArgs e)
         {
             //Maybe have public interger to increment orderNumber?
-            float totalCost;
+            float totalCost = float.Parse(totalCostTextBox.Text);
             //create object to pass to kitchen screen
             Burger burger = new Burger();
-
+            //setting name of item
             burger.NameOfItem = "Burger";
             burger.PriceOfItem = 2.49f;
+            order.addItem(burger);
 
             orderListBox.Items.Add(burger.NameOfItem + " \t\t\t\t\t £" + burger.PriceOfItem);
-           
-            if (!float.TryParse(totalCostTextBox.Text, out totalCost))
-            {
-                MessageBox.Show("This is a number only field", "Error401" ,MessageBoxButtons.OK);
-                return;
-            }else
-            {
-                totalCost += (float)(burger.PriceOfItem);
-                totalCostTextBox.Text = totalCost.ToString();
-            }
 
+            totalCost += (float)(burger.PriceOfItem);
+            totalCostTextBox.Text = totalCost.ToString();
         }
+
 
         private void chickenBoxButton_Click(object sender, EventArgs e)
         {
-            float totalCost;
+            float totalCost = float.Parse(totalCostTextBox.Text);
 
-            Food mealObj = new Food();
-            mealObj.NameOfItem = "Chicken Box";
-            mealObj.PriceOfItem = 6.29f;
+            ChickenBox chickenItem = new ChickenBox();
+            chickenItem.NameOfItem = "Chicken Box";
+            chickenItem.PriceOfItem = 6.29f;
+            order.addItem(chickenItem);
 
-            orderListBox.Items.Add(mealObj.NameOfItem + " \t\t\t\t £" + mealObj.PriceOfItem);
-            
+            orderListBox.Items.Add(chickenItem.NameOfItem + " \t\t\t\t £" + chickenItem.PriceOfItem);
 
-            if (!float.TryParse(totalCostTextBox.Text, out totalCost))
-            {
-                MessageBox.Show("This is a number only field", "Error401", MessageBoxButtons.OK);
-                return;
-            }
-            else
-            {
-                totalCost += (float)(mealObj.PriceOfItem);
-                totalCostTextBox.Text = totalCost.ToString();
-            }
+            totalCost += (float)(chickenItem.PriceOfItem);
+            totalCostTextBox.Text = totalCost.ToString();
         }
+    
 
         private void chickenWrapButton_Click(object sender, EventArgs e)
         {
-            float totalCost;
+            //grabbing current total cost from total text box
+            float totalCost = float.Parse(totalCostTextBox.Text);
 
+            //creating setting name and price of object
             ChickenSub chickenSubItem = new ChickenSub();
             chickenSubItem.NameOfItem = "Chicken Sub";
             chickenSubItem.PriceOfItem = 3.39f;
-
+            order.addItem(chickenSubItem);
+            
+            //adding to customer order list
             orderListBox.Items.Add(chickenSubItem.NameOfItem + " \t\t\t\t £" + chickenSubItem.PriceOfItem.ToString());
             
-
-            if (!float.TryParse(totalCostTextBox.Text, out totalCost))
-            {
-                MessageBox.Show("This is a number only field", "Error401", MessageBoxButtons.OK);
-                return;
-            }
-            else
-            {
-                totalCost += (float)(chickenSubItem.PriceOfItem);
-                totalCostTextBox.Text = totalCost.ToString();
-            }
-        }
-
+            //adding cost of item to total
+            totalCost += (float)(chickenSubItem.PriceOfItem);
+            totalCostTextBox.Text = totalCost.ToString();
+         }
         
-
-        private void largeChipsButton_Click(object sender, EventArgs e)
+        
+        private void chipsButton_Click(object sender, EventArgs e)
         {
             float totalCost = float.Parse(totalCostTextBox.Text);
 
+            //creating setting name and price of object
             Chips chipsItem = new Chips();
-            chipsItem.NameOfItem = "Large Chips";
-            chipsItem.PriceOfItem = 1.89f;
+            chipsItem.NameOfItem = "Medium Chips";
+            order.addItem(chipsItem);
+
+            //adding to customer order list
             orderListBox.Items.Add(chipsItem.NameOfItem + " \t\t\t\t £" + chipsItem.PriceOfItem);
 
-           
+            //adding cost of item to total
             totalCost += (float)(chipsItem.PriceOfItem);
             totalCostTextBox.Text = totalCost.ToString();
         }
 
-        private void checkoutLabel_Click(object sender, EventArgs e)
+        private void checkoutButton_Click(object sender, EventArgs e)
         {
-            float totalCost;
+            float totalCost = float.Parse(totalCostTextBox.Text);
 
-            if (!float.TryParse(totalCostTextBox.Text, out totalCost))
-            {
-                MessageBox.Show("This is a number only field", "Error401", MessageBoxButtons.OK);
-                return;
-            }
-
-            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox, this, kitchenScreen);
+            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox, order, this, kitchenScreen);
             this.Hide();
             checkoutForm.Show();
         }

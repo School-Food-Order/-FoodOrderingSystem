@@ -12,36 +12,39 @@ namespace test
 {
     public partial class KitchenLiveOrderScreen : Form
     {
-
-        Food[] foods;
+        private int orderNoCount;
 
         public KitchenLiveOrderScreen()
         {
             InitializeComponent();
+            orderNoCount = 0;
         }
+
+        public int OrderNoCount
+        {
+            get { return orderNoCount; }
+            set { orderNoCount = value; }
+        }
+
+        public void incrementOrderNo()
+        {
+            orderNoCount++;
+        }
+
 
         private void rdyCollectionButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void orderToKitchen(Food[] f) 
+        public void orderToKitchen(Order order) 
         {
-            int i=0;
-            foreach (var item in f) 
-            {
-                foods[i] = item;
-                i++;
-            }
-            addToList();
+            preparingListBox.Items.Add("Order " + order.OrderNo.ToString());
         }
 
         private void addToList() 
         {
-            foreach (var item in foods) 
-            {
-                
-            }
+
         }
 
         private void KitchenLiveOrderScreen_Load(object sender, EventArgs e)

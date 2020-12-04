@@ -32,11 +32,11 @@
             this.burgerMealButton = new System.Windows.Forms.Button();
             this.chickenBoxButton = new System.Windows.Forms.Button();
             this.chickenSubButton = new System.Windows.Forms.Button();
-            this.largeChipsButton = new System.Windows.Forms.Button();
+            this.chipsButton = new System.Windows.Forms.Button();
             this.orderListBox = new System.Windows.Forms.ListBox();
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalCostTextBox = new System.Windows.Forms.TextBox();
-            this.checkoutLabel = new System.Windows.Forms.Button();
+            this.checkoutButton = new System.Windows.Forms.Button();
             this.yourOrderLabel = new System.Windows.Forms.Label();
             this.orderScreenRemoveButton = new System.Windows.Forms.Button();
             this.burgerCustomiseButton = new System.Windows.Forms.Button();
@@ -77,15 +77,15 @@
             this.chickenSubButton.UseVisualStyleBackColor = true;
             this.chickenSubButton.Click += new System.EventHandler(this.chickenWrapButton_Click);
             // 
-            // largeChipsButton
+            // chipsButton
             // 
-            this.largeChipsButton.Image = ((System.Drawing.Image)(resources.GetObject("largeChipsButton.Image")));
-            this.largeChipsButton.Location = new System.Drawing.Point(145, 272);
-            this.largeChipsButton.Name = "largeChipsButton";
-            this.largeChipsButton.Size = new System.Drawing.Size(150, 150);
-            this.largeChipsButton.TabIndex = 3;
-            this.largeChipsButton.UseVisualStyleBackColor = true;
-            this.largeChipsButton.Click += new System.EventHandler(this.largeChipsButton_Click);
+            this.chipsButton.Image = ((System.Drawing.Image)(resources.GetObject("chipsButton.Image")));
+            this.chipsButton.Location = new System.Drawing.Point(145, 272);
+            this.chipsButton.Name = "chipsButton";
+            this.chipsButton.Size = new System.Drawing.Size(150, 150);
+            this.chipsButton.TabIndex = 3;
+            this.chipsButton.UseVisualStyleBackColor = true;
+            this.chipsButton.Click += new System.EventHandler(this.chipsButton_Click);
             // 
             // orderListBox
             // 
@@ -115,18 +115,18 @@
             this.totalCostTextBox.TabIndex = 6;
             this.totalCostTextBox.Text = "0.00";
             // 
-            // checkoutLabel
+            // checkoutButton
             // 
-            this.checkoutLabel.BackColor = System.Drawing.Color.LightGreen;
-            this.checkoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkoutLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.checkoutLabel.Location = new System.Drawing.Point(942, 626);
-            this.checkoutLabel.Name = "checkoutLabel";
-            this.checkoutLabel.Size = new System.Drawing.Size(247, 45);
-            this.checkoutLabel.TabIndex = 7;
-            this.checkoutLabel.Text = "CHECKOUT";
-            this.checkoutLabel.UseVisualStyleBackColor = false;
-            this.checkoutLabel.Click += new System.EventHandler(this.checkoutLabel_Click);
+            this.checkoutButton.BackColor = System.Drawing.Color.LightGreen;
+            this.checkoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkoutButton.Location = new System.Drawing.Point(942, 626);
+            this.checkoutButton.Name = "checkoutButton";
+            this.checkoutButton.Size = new System.Drawing.Size(247, 45);
+            this.checkoutButton.TabIndex = 7;
+            this.checkoutButton.Text = "CHECKOUT";
+            this.checkoutButton.UseVisualStyleBackColor = false;
+            this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
             // 
             // yourOrderLabel
             // 
@@ -228,12 +228,12 @@
             this.Controls.Add(this.chickenSubCustomise);
             this.Controls.Add(this.burgerCustomiseButton);
             this.Controls.Add(this.orderScreenRemoveButton);
-            this.Controls.Add(this.largeChipsButton);
+            this.Controls.Add(this.chipsButton);
             this.Controls.Add(this.burgerMealButton);
             this.Controls.Add(this.chickenBoxButton);
             this.Controls.Add(this.chickenSubButton);
             this.Controls.Add(this.yourOrderLabel);
-            this.Controls.Add(this.checkoutLabel);
+            this.Controls.Add(this.checkoutButton);
             this.Controls.Add(this.totalCostTextBox);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.orderListBox);
@@ -251,11 +251,11 @@
         private System.Windows.Forms.Button burgerMealButton;
         private System.Windows.Forms.Button chickenBoxButton;
         private System.Windows.Forms.Button chickenSubButton;
-        private System.Windows.Forms.Button largeChipsButton;
+        private System.Windows.Forms.Button chipsButton;
         public System.Windows.Forms.ListBox orderListBox;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.TextBox totalCostTextBox;
-        private System.Windows.Forms.Button checkoutLabel;
+        private System.Windows.Forms.Button checkoutButton;
         private System.Windows.Forms.Label yourOrderLabel;
         private System.Windows.Forms.Button orderScreenRemoveButton;
         private System.Windows.Forms.Button burgerCustomiseButton;

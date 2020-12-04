@@ -14,7 +14,7 @@ namespace test
         //NameOfItem
         //ItemCount
 
-        private const float _baseChipsCost = 2.49f;
+        private const float _baseChipsCost = 1.69f;
         private const float _chipsCheeseCost = 0.50f;
         private const float _chipsKetchupDip = 0.00f;
 
@@ -77,21 +77,21 @@ namespace test
 
             if (ChipsSalt == true)
             {
-                customisationList.Add("Chips Salt,");
+                customisationList.Add("Chips Salt");
             }
             if (ChipsPepper == true)
             {
-                customisationList.Add("Chips Pepper,");
+                customisationList.Add("Chips Pepper");
             }
 
             //checking for extra custimisation
             if (ChipsCheese == true)
             {
-                customisationList.Add("Chips Cheese,");
+                customisationList.Add("Chips Cheese");
             }
             if (ChipsKetchupDip == true)
             {
-                customisationList.Add("Ketchup Dip,");
+                customisationList.Add("Ketchup Dip");
             }
             
 

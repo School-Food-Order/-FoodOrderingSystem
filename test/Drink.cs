@@ -53,7 +53,6 @@ namespace test
         }
 
         #endregion BaseOptions
-
         //ExtraOptions
         #region ExtraOptions
         public bool DrinkExtraIce
@@ -103,24 +102,24 @@ namespace test
             #region AddingToList
             if (DrinkIce == true)
             {
-                customisationList.Add("Drink Ice,");
+                customisationList.Add("Drink Ice");
             }
             if (DrinkSizeSmall == true)
             {
-                customisationList.Add("Drink size Small,");
+                customisationList.Add("Drink size Small");
             }
             //Extra options
             if (DrinkExtraIce == true)
             {
-                customisationList.Add("Drink Extra Ice,");
+                customisationList.Add("Drink Extra Ice");
             }
             if (DrinkSizeMed == true)
             {
-                customisationList.Add("Drink size Medium,");
+                customisationList.Add("Drink size Medium");
             }
             if (DrinkSizeLrg == true)
             {
-                customisationList.Add("Drink size Large,");
+                customisationList.Add("Drink size Large");
             }
 
             #endregion AddingToList
