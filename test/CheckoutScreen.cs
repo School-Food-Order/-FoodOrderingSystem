@@ -38,7 +38,7 @@ namespace test
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
-            if (int.Parse(totalTextBox.Text) !=0)
+            if (float.Parse(totalTextBox.Text) != 0f)
             {
                 //Order Confirmation
                 DialogResult result = MessageBox.Show("Are you sure you want to place this order?", "Order Confirmation", MessageBoxButtons.YesNo);
