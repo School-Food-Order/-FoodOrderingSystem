@@ -117,11 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="iconSubroll" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconSubroll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconHappyGuy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconHappyGuy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="helpRichTextBox.Text" xml:space="preserve">
+    <value>Q: How do I place an order?
+A: Making an order with us is simple. Just go to the menu, search for your favourite food, add it to the basket and proceed with the payment.
+
+Q: What is the cost of the application?
+A: Our application is completely free and easy to download. 
+
+Q: Where is this available?
+A: At the moment it is only available in the United Kingdom and North Ireland, but we are trying to widen our services abroad.
+
+Q: When is an application open for an order?
+A: It is open every day of the week from 8 a.m. until 11 p.m.
+
+Q: How do I customise the order?
+A: You can customise orders by clicking "customise".
+
+Q: What can I order?
+A: You are eligible to order anything available on the menu screen as much as you like and customize it as you prefer.
+
+Q: If I want to return the order, what do I do?
+A: You can easily just go the till and our members of staff will help you satisfy and make the order as you like.
+
+Q: When will my order be ready?
+A: Once you place the order you will be able to see the order preparing and will be notified when it is available for collection!
+
+Q: How do I apply my discount?
+A: On the screen, you are going to be able to see the discount button and there you can add an applicable discount for your final bill.
+
+Q: Is it safe to use my debit/credit card for the payment?
+A: Our payments are made securely and most possibly safe to keep our customers protected. We do not store any of your banking information that you input for the order payment.</value>
   </data>
 </root>

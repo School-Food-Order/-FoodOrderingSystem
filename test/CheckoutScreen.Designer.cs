@@ -34,6 +34,7 @@
             this.orderTotalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.checkoutButton = new System.Windows.Forms.Button();
+            this.checkoutBackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // yourOrderLabel
@@ -84,10 +85,22 @@
             this.checkoutButton.UseVisualStyleBackColor = true;
             this.checkoutButton.Click += new System.EventHandler(this.checkoutButton_Click);
             // 
+            // checkoutBackButton
+            // 
+            this.checkoutBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkoutBackButton.Location = new System.Drawing.Point(664, 437);
+            this.checkoutBackButton.Name = "checkoutBackButton";
+            this.checkoutBackButton.Size = new System.Drawing.Size(89, 37);
+            this.checkoutBackButton.TabIndex = 5;
+            this.checkoutBackButton.Text = "Back";
+            this.checkoutBackButton.UseVisualStyleBackColor = true;
+            this.checkoutBackButton.Click += new System.EventHandler(this.checkoutBackButton_Click);
+            // 
             // CheckoutScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(800, 505);
+            this.Controls.Add(this.checkoutBackButton);
             this.Controls.Add(this.checkoutButton);
             this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.orderTotalLabel);
@@ -108,5 +121,6 @@
         private System.Windows.Forms.Label orderTotalLabel;
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.Button checkoutButton;
+        private System.Windows.Forms.Button checkoutBackButton;
     }
 }

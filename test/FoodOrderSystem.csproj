@@ -46,6 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Burger.cs" />
+    <Compile Include="BurgerCustomiseScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BurgerCustomiseScreen.Designer.cs">
+      <DependentUpon>BurgerCustomiseScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChickenBoxCustomiseScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChickenBoxCustomiseScreen.Designer.cs">
+      <DependentUpon>ChickenBoxCustomiseScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChickenSub.cs" />
+    <Compile Include="ChickenSubCustomiseScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChickenSubCustomiseScreen.Designer.cs">
+      <DependentUpon>ChickenSubCustomiseScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chips.cs" />
+    <Compile Include="ChipsCustomiseScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChipsCustomiseScreen.Designer.cs">
+      <DependentUpon>ChipsCustomiseScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChickenBox.cs" />
+    <Compile Include="CustomerLiveOrderScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerLiveOrderScreen.Designer.cs">
+      <DependentUpon>CustomerLiveOrderScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerOrderScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,13 +92,65 @@
     <Compile Include="CheckoutScreen.Designer.cs">
       <DependentUpon>CheckoutScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Drink.cs" />
+    <Compile Include="DrinkCustomiseScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrinkCustomiseScreen.Designer.cs">
+      <DependentUpon>DrinkCustomiseScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="HelpScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpScreen.Designer.cs">
+      <DependentUpon>HelpScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeoutSelectionScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeoutSelectionScreen.Designer.cs">
+      <DependentUpon>TakeoutSelectionScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitchenLiveOrderScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitchenLiveOrderScreen.Designer.cs">
+      <DependentUpon>KitchenLiveOrderScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BurgerCustomiseScreen.resx">
+      <DependentUpon>BurgerCustomiseScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChickenBoxCustomiseScreen.resx">
+      <DependentUpon>ChickenBoxCustomiseScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChickenSubCustomiseScreen.resx">
+      <DependentUpon>ChickenSubCustomiseScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChipsCustomiseScreen.resx">
+      <DependentUpon>ChipsCustomiseScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerLiveOrderScreen.resx">
+      <DependentUpon>CustomerLiveOrderScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerOrderScreen.resx">
       <DependentUpon>CustomerOrderScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckoutScreen.resx">
       <DependentUpon>CheckoutScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrinkCustomiseScreen.resx">
+      <DependentUpon>DrinkCustomiseScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpScreen.resx">
+      <DependentUpon>HelpScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitchenLiveOrderScreen.resx">
+      <DependentUpon>KitchenLiveOrderScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,7 +160,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TakeoutSelectionScreen.resx">
+      <DependentUpon>TakeoutSelectionScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -87,6 +177,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconSubroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconHappyGuy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
