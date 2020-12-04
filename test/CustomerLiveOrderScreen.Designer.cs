@@ -30,8 +30,8 @@
         {
             this.CustomerLOScreen_Preparing = new System.Windows.Forms.Button();
             this.CustomerLOScreen_Collect = new System.Windows.Forms.Button();
-            this.CustomerLOScreen_ListboxCollect = new System.Windows.Forms.ListBox();
-            this.CustomerLOScreen_ListboxPreparing = new System.Windows.Forms.ListBox();
+            this.pleaseCollectListbox = new System.Windows.Forms.ListBox();
+            this.preparingOrderListBox = new System.Windows.Forms.ListBox();
             this.burgerPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.burgerPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -58,21 +58,21 @@
             this.CustomerLOScreen_Collect.Text = "PLEASE COLLECT";
             this.CustomerLOScreen_Collect.UseVisualStyleBackColor = false;
             // 
-            // CustomerLOScreen_ListboxCollect
+            // pleaseCollectListbox
             // 
-            this.CustomerLOScreen_ListboxCollect.FormattingEnabled = true;
-            this.CustomerLOScreen_ListboxCollect.Location = new System.Drawing.Point(587, 58);
-            this.CustomerLOScreen_ListboxCollect.Name = "CustomerLOScreen_ListboxCollect";
-            this.CustomerLOScreen_ListboxCollect.Size = new System.Drawing.Size(500, 563);
-            this.CustomerLOScreen_ListboxCollect.TabIndex = 4;
+            this.pleaseCollectListbox.FormattingEnabled = true;
+            this.pleaseCollectListbox.Location = new System.Drawing.Point(587, 58);
+            this.pleaseCollectListbox.Name = "pleaseCollectListbox";
+            this.pleaseCollectListbox.Size = new System.Drawing.Size(500, 563);
+            this.pleaseCollectListbox.TabIndex = 4;
             // 
-            // CustomerLOScreen_ListboxPreparing
+            // preparingOrderListBox
             // 
-            this.CustomerLOScreen_ListboxPreparing.FormattingEnabled = true;
-            this.CustomerLOScreen_ListboxPreparing.Location = new System.Drawing.Point(12, 58);
-            this.CustomerLOScreen_ListboxPreparing.Name = "CustomerLOScreen_ListboxPreparing";
-            this.CustomerLOScreen_ListboxPreparing.Size = new System.Drawing.Size(500, 563);
-            this.CustomerLOScreen_ListboxPreparing.TabIndex = 5;
+            this.preparingOrderListBox.FormattingEnabled = true;
+            this.preparingOrderListBox.Location = new System.Drawing.Point(12, 58);
+            this.preparingOrderListBox.Name = "preparingOrderListBox";
+            this.preparingOrderListBox.Size = new System.Drawing.Size(500, 563);
+            this.preparingOrderListBox.TabIndex = 5;
             // 
             // burgerPictureBox
             // 
@@ -89,8 +89,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1450, 647);
             this.Controls.Add(this.burgerPictureBox);
-            this.Controls.Add(this.CustomerLOScreen_ListboxPreparing);
-            this.Controls.Add(this.CustomerLOScreen_ListboxCollect);
+            this.Controls.Add(this.preparingOrderListBox);
+            this.Controls.Add(this.pleaseCollectListbox);
             this.Controls.Add(this.CustomerLOScreen_Collect);
             this.Controls.Add(this.CustomerLOScreen_Preparing);
             this.Name = "CustomerLiveOrderScreen";
@@ -105,8 +105,8 @@
 
         private System.Windows.Forms.Button CustomerLOScreen_Preparing;
         private System.Windows.Forms.Button CustomerLOScreen_Collect;
-        private System.Windows.Forms.ListBox CustomerLOScreen_ListboxCollect;
-        private System.Windows.Forms.ListBox CustomerLOScreen_ListboxPreparing;
+        private System.Windows.Forms.ListBox pleaseCollectListbox;
+        private System.Windows.Forms.ListBox preparingOrderListBox;
         private System.Windows.Forms.PictureBox burgerPictureBox;
     }
 }

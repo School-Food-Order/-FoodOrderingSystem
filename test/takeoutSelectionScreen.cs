@@ -14,18 +14,20 @@ namespace test
     {
 
         KitchenLiveOrderScreen kitchenScreen;
+        CustomerLiveOrderScreen customerScreen;
 
-        public TakeoutSelectionScreen(KitchenLiveOrderScreen kOrderScreen)
+        public TakeoutSelectionScreen(KitchenLiveOrderScreen kOrderScreen, CustomerLiveOrderScreen customerLiveScrenObject)
         {
             InitializeComponent();
             kitchenScreen = kOrderScreen;
+            customerScreen = customerLiveScrenObject;
             kOrderScreen.incrementOrderNo();
         }
         
         private void eatInButton_Click(object sender, EventArgs e)
         {
             Order order = new Order(kitchenScreen);
-            OrderScreen orderScreen = new OrderScreen(kitchenScreen, order);
+            OrderScreen orderScreen = new OrderScreen(kitchenScreen, customerScreen, order);
 
             if (!int.TryParse(tableNumberTextBox.Text, out int tableNumber))
             {
@@ -40,7 +42,7 @@ namespace test
         private void takeoutButton_Click(object sender, EventArgs e)
         {
             Order order = new Order(kitchenScreen);
-            OrderScreen orderScreen = new OrderScreen(kitchenScreen, order);
+            OrderScreen orderScreen = new OrderScreen(kitchenScreen, customerScreen, order);
             orderScreen.Show();
             this.Dispose();
         }

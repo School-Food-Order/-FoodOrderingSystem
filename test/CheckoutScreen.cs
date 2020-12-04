@@ -16,9 +16,10 @@ namespace test
 
         OrderScreen orderScreen;
         KitchenLiveOrderScreen kitchenScreen;
+        CustomerLiveOrderScreen customerScreen;
         Order order;
 
-        public CheckoutScreen(float total, ListBox list, Order orderObject, OrderScreen oScreen, KitchenLiveOrderScreen kOScreen)
+        public CheckoutScreen(float total, ListBox list, Order orderObject, OrderScreen oScreen, KitchenLiveOrderScreen kOScreen, CustomerLiveOrderScreen custScreenObject)
         {
             InitializeComponent();
             totalTextBox.Text = total.ToString();
@@ -31,12 +32,13 @@ namespace test
             order = orderObject;
             orderScreen = oScreen;
             kitchenScreen = kOScreen;
+            customerScreen = custScreenObject;
         }
 
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
-            if (int.Parse(totalTextBox.Text) != 0)
+            if (int.Parse(totalTextBox.Text) !=0)
             {
                 //Order Confirmation
                 DialogResult result = MessageBox.Show("Are you sure you want to place this order?", "Order Confirmation", MessageBoxButtons.YesNo);
@@ -46,6 +48,7 @@ namespace test
 
                     //pass order to kitchen
                     kitchenScreen.orderToKitchen(order);
+                    customerScreen.orderToCustomer(order);
 
                     //@"C:\Users\Public\Documents\"+order.OrderNo+".txt"
                     //saveFile.Filter = "Text (*.txt)|*.txt";
@@ -67,7 +70,13 @@ namespace test
                         sw.Write("Total Cost: £" + totalTextBox.Text);
                     }
                     MessageBox.Show("Receipt is being printed");
-                    TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(kitchenScreen);
+
+
+
+
+
+                    TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(kitchenScreen, customerScreen);
+
                     MessageBox.Show("Thank-you for placing your order, it has been sent to the kitchen to be prepared!", "Order Confirmation", MessageBoxButtons.OK);
 
                     orderScreen.Dispose();
@@ -84,7 +93,7 @@ namespace test
             {
                 MessageBox.Show("Sorry, but you need to select an item to proceed to checkout.");
             }
-            
+           
         }
 
         private void checkoutBackButton_Click(object sender, EventArgs e)

@@ -14,12 +14,14 @@ namespace test
     {
         private int orderNo;
         KitchenLiveOrderScreen kitchenScreen;
+        CustomerLiveOrderScreen customerScreen;
         Order order;
 
-        public OrderScreen(KitchenLiveOrderScreen kOrderScreen, Order orderObject)
+        public OrderScreen(KitchenLiveOrderScreen kOrderScreen, CustomerLiveOrderScreen customerLiveOrderScreenObject,Order orderObject)
         {
             InitializeComponent();
             kitchenScreen = kOrderScreen;
+            customerScreen = customerLiveOrderScreenObject;
             order = orderObject;
         }
 
@@ -100,7 +102,7 @@ namespace test
         {
             float totalCost = float.Parse(totalCostTextBox.Text);
 
-            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox, order, this, kitchenScreen);
+            CheckoutScreen checkoutForm = new CheckoutScreen(totalCost, orderListBox, order, this, kitchenScreen, customerScreen);
             this.Hide();
             checkoutForm.Show();
         }

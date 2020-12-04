@@ -14,6 +14,7 @@ namespace test
     {
         private int orderNoCount;
         private List<Order> pastOrders = new List<Order>();
+        CustomerLiveOrderScreen custOrderScreen = new CustomerLiveOrderScreen();
 
         public KitchenLiveOrderScreen()
         {
@@ -35,7 +36,11 @@ namespace test
 
         private void rdyCollectionButton_Click(object sender, EventArgs e)
         {
-
+            string currentlySelected = preparingListBox.SelectedItem.ToString();
+            preparingListBox.Items.Remove(currentlySelected);
+            foodReadyListBox.Items.Add(currentlySelected);
+            custOrderScreen.readyToCollect(currentlySelected);
+            preparingListBox.Select();
         }
 
         public void orderToKitchen(Order order) 
@@ -118,13 +123,13 @@ namespace test
 
         private void KitchenLiveOrderScreen_Load(object sender, EventArgs e)
         {
-            TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(this);
-            CustomerLiveOrderScreen custOrderScreen = new CustomerLiveOrderScreen();
+            TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(this, custOrderScreen);
             custOrderScreen.Show();
             takeOutScreen.Show();
         }
 
-        private void preparingListBox_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void showDetailsButton_Click(object sender, EventArgs e)
         {
             orderDetailsTextBox.Clear(); // clears previous order details
 
@@ -150,17 +155,17 @@ namespace test
             }
         }
 
-        private void foodReadyListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void showRdyDetailsButton_Click(object sender, EventArgs e)
         {
             orderDetailsTextBox.Clear(); // clears previous order details
 
-            if (preparingListBox.SelectedIndex == -1)
+            if (foodReadyListBox.SelectedIndex == -1)
             {
                 MessageBox.Show("Please select an Item first!");
             }
             else
             {
-                string currentlySelected = preparingListBox.SelectedItem.ToString();
+                string currentlySelected = foodReadyListBox.SelectedItem.ToString();
                 char[] charsToTrim = { 'O', 'r', 'd', 'e', ' ' };
                 currentlySelected = currentlySelected.Trim(charsToTrim);
                 int x = int.Parse(currentlySelected);
@@ -175,5 +180,6 @@ namespace test
                 }
             }
         }
+
     }
 }
