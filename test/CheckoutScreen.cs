@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace test
 {
@@ -40,6 +41,25 @@ namespace test
                 //user said yes order goes through
 
                 //pass order to kitchen
+
+                var saveFile = new SaveFileDialog();
+                saveFile.Filter = "Text (*.txt)|*.txt";
+                if (saveFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+
+                    using (var sw = new StreamWriter(saveFile.FileName, false))
+                    {
+                        sw.Write("Order Number: ");//ADD ORDERNUMBER HERE
+                        foreach (var item in checkoutListBox.Items)
+                        {
+                            sw.Write(item.ToString() + Environment.NewLine);
+                        }
+                        sw.Write("Total Cost: £"+totalTextBox.Text);
+                    }
+                                                   
+                    MessageBox.Show("Success");
+                }
+
 
                 TakeoutSelectionScreen takeOutScreen = new TakeoutSelectionScreen(kitchenScreen);
 
