@@ -84,6 +84,7 @@ namespace test
             //creating setting name and price of object
             Chips chipsItem = new Chips();
             chipsItem.NameOfItem = "Medium Chips";
+            chipsItem.PriceOfItem = chipsItem.ReturnTotalCost();
             order.addItem(chipsItem);
 
             //adding to customer order list
